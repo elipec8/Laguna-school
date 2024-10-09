@@ -3,19 +3,34 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
 <div class="retangulo">
     <h1>Laguna</h1>
     <form class="login">
-        <input type="text" id="usuario" name="usuario" placeholder="Usuário">
-        <br>
-        <br>
-        <input type="text" id="senha" name="senha" placeholder="Senha">
-        <br>
-        <br>
+        <div class="usuario">
+            <i class='bx bx-user'></i>
+            <input type="text" id="usuario" name="usuario" placeholder="Usuário">
+        </div>
+
+        <div class="senha">
+            <i class='bx bx-lock-alt' ></i>
+            <input type="text" id="senha" name="senha" placeholder="Senha">
+        </div>
+        <div class="ocupacao">
+            <select>
+                <option></option>
+                <option>Professor</option>
+                <option>Aluno</option>
+            </select>
+        </div>
         <button class="acessar">acessar</button>
+
+        
+
     </form>
 
 </div>
