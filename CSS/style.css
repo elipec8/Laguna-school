@@ -24,6 +24,7 @@ body {
     text-align: center;
     margin: 200px;
     width: fit-content;
+    
 }
 
 
@@ -38,13 +39,14 @@ body {
 h1{
     font-size: 100px;
     text-align: center;
+    color: white;
 }
 
 .retangulo{
-    width: 25vw; /* 25% da largura da tela */
-    height: 100vh; /* 60% da altura da tela */
+    width: 440px; /* 25% da largura da tela */
+    height: 1000px; /* 60% da altura da tela */
     background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 0px solid rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 10px;
     color: white;
