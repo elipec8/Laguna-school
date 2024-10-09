@@ -1,11 +1,38 @@
-
-
 /*sobre nós*/
-.meio{ text-align: center }
-h1{color: black;}
-body{
-   background-image: url("imagem/fundo.png");
+
+.container {
+    position: relative; /* Necessário para que os filhos possam usar 'absolute' */
+    height: 200px; /* Define a altura do contêiner */
+    background-color: rgba(211, 211, 211, 0.185);
 }
+h2{
+    color: white;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../img/fundo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.meio{
+    text-align: center;
+    color: ghostwhite;
+}
+
+.allft {
+    text-align: center; 
+  }
+
+.foto{
+    margin: 50px; 
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+}
+
+
 
 
 
