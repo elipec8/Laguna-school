@@ -1,10 +1,5 @@
 /*sobre nós*/
 
-.container {
-    position: relative; /* Necessário para que os filhos possam usar 'absolute' */
-    height: 200px; /* Define a altura do contêiner */
-    background-color: rgba(211, 211, 211, 0.185);
-}
 h2{
     color: white;
 }
@@ -32,50 +27,50 @@ body {
     box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
 }
 
-
-
-
-
-
-
-/*login*/
-body {
-    background-image: url("../laguna login.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
+.dudu{
+    position: relative;     
+  
+  width: 200px;
+  top: -20px;       
+  right: -330px;        
 }
 
-.login{
+.lucas{
+    position: relative;     
+  
+  width: 250px;
+  top: -100px;       
+  right: -675px;        
+}
+
+.murillo{
+    position: relative;     
+  
+  width: 200px;
+  top: -180px;       
+  right: -1028px;    
+}
+
+.felipe{
+    position: relative;     
+  
+    width: 200px;
+    top: -260px;       
+    right: -1345px;    
+}
+
+.des{
     text-align: center;
-    margin: 200px;
-    width: fit-content;
+    color: whitesmoke;
+    position: relative; 
+    width: 1000px;  
+    top: -180px;
+    right: -457px
+}
+
+.sobre{
+    text-align: center;
+    position: relative;
+    top: -180px;
     
 }
-
-
-.acessar{
-    background-color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 7px;
-    border-left: 10px;
-    width: 100px;
-}
-
-h1{
-    font-size: 100px;
-    text-align: center;
-    color: white;
-}
-
-.retangulo{
-    width: 440px; /* 25% da largura da tela */
-    height: 1000px; /* 60% da altura da tela */
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 0px solid rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-}
-
