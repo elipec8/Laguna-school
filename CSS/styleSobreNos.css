@@ -84,13 +84,14 @@ body {
 
 i{
     font-size: 35px;
+    display: grid;
+    
 }
 
 
 a{
     display: grid;
     margin-left: 4%;
-    width: 2%;
     padding: 4px;
     text-decoration: none;
     border-radius: 100%;
@@ -99,9 +100,9 @@ a{
     background-color: #ffffff;
     color: #000000;
     box-shadow: 2px 2px 2px #000;
+    width: fit-content;
 }
 
 a:hover{
     background-color: rgb(206, 195, 195);
 }
-
