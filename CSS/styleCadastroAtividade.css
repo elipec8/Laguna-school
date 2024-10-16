@@ -26,6 +26,18 @@ i{
     
 }
 
+#perfil{
+    display:grid;
+    grid-column: auto 0;
+    font-size: 80px;
+    margin-left: 80%;
+    position: absolute;
+
+    
+
+    
+}
+
 
 a{
     display: grid;
@@ -49,11 +61,17 @@ a:hover{
 
 
 h1{
-    background: radial-gradient(circle, #38739D, #142837);
+    background: radial-gradient( #38739D, #142837);
     padding: 25px;
     color: rgb(255, 255, 255);
     font-family: "Montaga", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
+    justify-content: center;
+}
+
+
+i{
+    
 }
