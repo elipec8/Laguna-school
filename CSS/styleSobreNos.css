@@ -1,5 +1,10 @@
 /*sobre nós*/
 
+
+*{
+    overflow: hidden;
+}
+
 h2{
     color: white;
 }
@@ -7,7 +12,6 @@ h2{
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("../img/fundo.png");
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -74,3 +78,22 @@ body {
     top: -180px;
     
 }
+
+button{
+    display: grid;
+    margin-left: 4%;
+    width: 2.4%;
+    padding: 4px;
+    border-radius: 200%;
+}
+
+
+button:hover{
+    background-color: rgb(206, 195, 195);
+}
+
+i{
+    font-size: 30px;
+}
+
+
