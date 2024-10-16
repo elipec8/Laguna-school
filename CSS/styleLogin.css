@@ -148,6 +148,10 @@ a:hover{
     color: rgba(143, 111, 111, 0.5)
 }
 
+.acessar:hover{
+    background-color: rgb(201, 186, 186);
+}
+
 .retangulo{
     width: 445px;
     height: 1100vh;
