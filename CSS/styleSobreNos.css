@@ -79,21 +79,29 @@ body {
     
 }
 
-button{
-    display: grid;
-    margin-left: 4%;
-    width: 2.4%;
-    padding: 4px;
-    border-radius: 200%;
-}
 
 
-button:hover{
-    background-color: rgb(206, 195, 195);
-}
 
 i{
-    font-size: 30px;
+    font-size: 35px;
 }
 
+
+a{
+    display: grid;
+    margin-left: 4%;
+    width: 2%;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 2px 2px 2px #000;
+}
+
+a:hover{
+    background-color: rgb(206, 195, 195);
+}
 
