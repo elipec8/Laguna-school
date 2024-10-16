@@ -1,1 +1,59 @@
+*{
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+}
 
+
+.retangulo{
+    width: 445px;
+    height: 1100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 81vh;
+    margin-top: 7px;
+    width:88vw;
+    margin-left: 5%;
+}
+
+
+i{
+    font-size: 35px;
+    display: grid;
+    
+}
+
+
+a{
+    display: grid;
+    margin-left: 2%;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 2px 2px 2px #000;
+    width: fit-content;
+    margin-top: 1%;
+}
+
+a:hover{
+    background-color: rgb(206, 195, 195);
+}
+
+
+
+h1{
+    background: radial-gradient(circle, #38739D, #142837);
+    padding: 25px;
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
