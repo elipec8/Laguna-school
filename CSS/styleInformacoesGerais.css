@@ -1,1 +1,146 @@
+.perfil{
+    
+    text-align: center;
+}
+.foto{
+text-align: center;
+color: white;
+}
 
+body{
+    background-color: rgb(46, 96, 130);
+}
+
+.gerais{
+    position: relative;
+    color: white;
+    right: -30px;
+    top: -30px;
+}
+
+.linha{
+    position: relative;
+    width: 97%;
+    top: -30px;
+}
+
+.nome{
+    position: relative;
+    color: white;
+    right: -500px
+}
+
+.retangulo {
+    position: relative;
+    right: -580px;
+    top: -50px;
+    width: 900px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.email{
+    position: relative;
+    color: white;
+    right: -500px
+}
+
+.senha{
+    position: relative;
+    color: white;
+    right: -500px
+}
+
+.retangulo2{
+    position: relative;
+    right: -580px;
+    top: -50px;
+    width: 400px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.mudar{
+    position: relative;
+    top: -39px;
+    right: -900px;
+    color: white;
+}
+
+.telefone{
+    position: relative;
+    color: white;
+    right: -500px;
+    width: 15px
+}
+
+
+.ocupação{
+    position: relative;
+    color: white;
+    right: -460px;
+    width: 15px
+}
+
+.pais{
+    position: relative;
+    color: white;
+    right: -500px;
+    width: 15px
+}
+
+
+.cidade{
+    position: relative;
+    color: white;
+    right: -500px;
+    width: 15px
+}
+
+
+.sair{
+    position: relative;
+    right: -1500px;
+    color: white;
+}
+
+
+
+
+
+
+
+i{
+    font-size: 35px;
+    display: grid;
+    
+}
+
+a:hover{
+    color: rgb(212, 212, 212);;
+}
+
+
+
+
+
+.botao:hover{
+    background-color: rgb(206, 195, 195);
+
+}
+
+.botao{
+    display: grid;
+    margin-left: 4%;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 100%;
+    text-align: center ;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 2px 2px 2px #000;
+    width: fit-content;
+}
