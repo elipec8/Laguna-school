@@ -6,7 +6,7 @@
     padding: 25px;
 }
 
-h1 {
+.laguna {
     color: rgb(255, 255, 255);
     font-family: "Montaga", serif;
     font-weight: 400;
@@ -19,3 +19,89 @@ h1 {
     color: #ffffff;
 }
 
+.nossa{
+    text-align: center;
+    color: white;
+}
+
+.foto1{
+    position: relative;
+    left: -190px;
+
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}
+
+body{
+    background: linear-gradient(#11293a, #3388c0);
+}
+
+.foto2{
+    position: relative;
+    left: -90px;
+
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}   
+
+.foto3{
+    position: relative;
+    right: 10px;
+
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}
+
+.foto3{
+    position: relative;
+    right: 10px;
+
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}
+
+.foto4{
+    position: relative;
+    left: -176px;   
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+    margin: 10px;
+}
+
+
+.foto5{
+    position: relative;
+    left: -99px;   
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+    margin: 10px;
+}
+
+.foto6{
+    position: relative;
+    right: 28px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+
+}
+
+.allfotos{
+    position: relative;
+right: -100px;    
+    text-align: center;
+   
+}
