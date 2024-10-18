@@ -1,0 +1,21 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+}
+
