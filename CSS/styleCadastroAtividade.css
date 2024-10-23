@@ -127,6 +127,7 @@ button{
     justify-content: center;
     background-color: #EBFFEB;
     border: none;
+    font-weight: bold;
 }
 
 .agendar{
