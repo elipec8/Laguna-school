@@ -1,1 +1,42 @@
-a
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleEditarAtividade.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Editar atividade</title>
+</head>
+<body>
+    <div class="header">
+        <h1>LAGUNA</h1>
+        <i class='bx bx-user-circle' id="perfil"></i>
+    </div>
+    
+    <a href="#"><i class='bx bx-left-arrow-alt'></i></a>
+    <form class="atividade">
+        <div class="retangulo">
+            <div class="titulo_data">
+                <div class="tituloAtividade">
+                    <h2>Título da atividade</h2>
+                    <input type="text" class="titulo">
+                </div>
+                <div class="data">
+                    <h2>Data de entrega</h2>
+                    <input type="date" class="dataAtividade">
+                </div>
+                
+            </div>
+            <div class="descricao_atividade">
+                <h2>Descrição</h2>
+                <textarea type="text" class="descricao"></textarea>
+            </div>
+            <div class="agendar">
+                <button>Agendar</button>
+                <button class="excluir">Excluir</button>
+            </div>
+        </div>  
+    </form>
+
+</body>
+</html>
