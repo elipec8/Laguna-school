@@ -1,0 +1,173 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+
+.laguna {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+body {
+    background-color: rgb(46, 96, 130);
+    margin: 0; 
+    height: 100vh;
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+}
+
+.ListadeAlunos{
+color: white;
+text-align: center;
+}
+
+.nome{
+    position: absolute;
+    top: 300px;
+    color:white ;
+    left: 50px;
+}
+
+.linha1{
+    position: relative;
+    top: 100px;
+    width: 97%;
+}
+
+.email{
+    color: #ffffff;
+    position: absolute;
+    top: 300px;
+    left: 1050px;
+}
+
+.retangulo{
+    position: absolute;
+    left: 40px;
+    top: 400px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.retangulo1{
+    position: absolute;
+    left: 1100px;
+    top: 400px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.linha2{
+    position: relative;
+    top: 200px;
+    width: 97%;
+}
+
+.retangulo2{
+    position: absolute;
+    left: 1100px;
+    top: 500px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.retangulo3{
+    position: absolute;
+    left: 40px;
+    top: 500px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.linha3{
+    position: relative;
+    top: 300px;
+    width: 97%;
+}
+.retangulo4{
+    position: absolute;
+    left: 1100px;
+    top: 600px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.retangulo5{
+    position: absolute;
+    left: 40px;
+    top: 600px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.linha4{
+    position: relative;
+    top: 400px;
+    width: 97%;
+}
+.retangulo6{
+    position: absolute;
+    left: 1100px;
+    top: 700px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.retangulo7{
+    position: absolute;
+    left: 40px;
+    top: 700px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.linha5{
+    position: relative;
+    top: 490px;
+    width: 97%;
+}
+.retangulo8{
+    position: absolute;
+    left: 1100px;
+    top: 800px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
+
+.retangulo9{
+    position: absolute;
+    left: 40px;
+    top: 800px;
+    width: 700px;       /* largura */
+    height: 40px;      /* altura */
+    background-color: rgba(0, 0, 0, 20%);
+    border: 2px solid black; 
+}
