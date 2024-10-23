@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body{
+html{
     background: linear-gradient(#2E6082, #5D7B8F);
     background-repeat: no-repeat;
     background-position: center;
@@ -61,8 +61,7 @@ a:hover {
     color: white;
     margin: 20px auto; 
     display: grid;
-    grid-auto-rows: 27%;
-
+    grid-auto-rows: 27% 27% 18%;
 }
 
 i {
@@ -72,26 +71,44 @@ i {
     
 }
 
+.data{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 32px;
+}
 
-.titulo_atividade{
+
+.titulo_data{
+    display: flex;
     margin-top: 10px;
     margin-left: 17px;
     padding: 5px;
     color: #000;
+    grid-row-start: 1;
 }
 
 .titulo{
     margin-top: 10px;
     height: 2vh;
     width: 25vw;
-    
+}
+
+
+.dataAtividade{
+    margin-left: auto;
+    margin-top: 10px;
+    width: 90%;
+    font-size: 15px;
 }
 
 
 .descricao_atividade{
     margin-top: 10px;
     margin-left: 17px;
-    color: #000; 
+    color: #000;
+    grid-row-end: 3; 
+    
 
 }
 
@@ -99,13 +116,23 @@ i {
     width: 85vw;
     margin-top: 30px;
     height: 30vh;
-}
-
-button{
-    display: grid;
-    width: 5vw;
-    height: 3vh;
-    align-items: center;
     
 }
 
+button{
+    display: flex;
+    width: 70px;
+    height: 27px;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBFFEB;
+    border: none;
+}
+
+.agendar{
+    display: grid;
+    margin-left:auto;
+    margin-top: auto;
+    grid-row-end: 5;
+    margin-right: 30px;
+}
