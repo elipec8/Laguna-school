@@ -74,6 +74,9 @@ a {
 }
 
 a:hover {
+    background-color: rgb(206, 195, 195);
+}
+    
 .voltar:hover {
     background-color: rgb(206, 195, 195);
 }
