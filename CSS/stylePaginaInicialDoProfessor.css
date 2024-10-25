@@ -1,0 +1,167 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+
+.laguna {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+body {
+    background: radial-gradient(#11293a,#3388c0)  ;
+    margin: 0; 
+    height: 100vh;
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+}
+
+.bemvindo{
+    position: absolute;
+    color: white;
+    left: 1500px;
+    top: 55px;
+}
+
+.retanperfil {
+    position: absolute;
+    left: 380px;
+    top: 280px;
+    width: 370px;       /* largura */
+    height: 70px;      /* altura */
+    background-color: rgba(0, 0, 0, 30%);
+    border: 2px solid black; 
+}
+
+.perfil{
+    color: #ffffff;
+    position: absolute;
+    top: 285px;
+    left: 540px;
+}
+
+
+.retansite{
+    position: absolute;
+    left: 1200px;
+    top: 280px;
+    width: 370px;       /* largura */
+    height: 70px;      /* altura */
+    background-color: rgba(0, 0, 0, 30%);
+    border: 2px solid black; 
+}
+
+.site{
+    color: #ffffff;
+    position: absolute;
+    top: 285px;
+    left: 1290px;
+}
+
+.retaneventos{
+    position: absolute;
+    left: 380px;
+    top: 570px;
+    width: 370px;       /* largura */
+    height: 70px;      /* altura */
+    background-color: rgba(0, 0, 0, 30%);
+    border: 2px solid black;
+}
+
+.eventos{
+    color: #ffffff;
+    position: absolute;
+    top: 570px;
+    left: 530px;
+}
+
+
+.retanAtividades{
+    position: absolute;
+    left: 1200px;
+    top: 570px;
+    width: 370px;       /* largura */
+    height: 70px;      /* altura */
+    background-color: rgba(0, 0, 0, 30%);
+    border: 2px solid black;
+}
+
+.Ativi{
+    color: #ffffff;
+    position: absolute;
+    top: 570px;
+    left: 1270px;
+}
+
+.ati{
+    position: absolute;
+    left: 1200px;
+    top: 646px;
+    width: 370px;       /* largura */
+    height: 170px;      /* altura */
+    background-color: rgba(0, 0, 0, 15%);
+    border: 2px solid black;
+}
+
+
+.eve{
+    position: absolute;
+    left: 380px;
+    top: 646px;
+    width: 370px;       /* largura */
+    height: 170px;      /* altura */
+    background-color: rgba(0, 0, 0, 15%);
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*menu dropdown*/
+.dropdown{
+    list-style-type: none;
+}
+.dropdownMenu{
+    position: absolute;
+    display: none;
+    margin-left: 15px;
+}
+.dropdownMenu a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+}
+.dropdowneunoColor:hover{
+    background-color: #bac0c5;
+}
+.dropdown:hover .dropdownMenu{
+    display: block;
+    background-color: white;
+}
+/*fim menu dropdown*/
