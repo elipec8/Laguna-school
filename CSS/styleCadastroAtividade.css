@@ -31,7 +31,32 @@ h1 {
     color: #ffffff;
 }
 
-a {
+/*menu dropdown*/
+.dropdown{
+    list-style-type: none;
+}
+.dropdownMenu{
+    position: absolute;
+    display: none;
+    margin-left: 15px;
+}
+.dropdownMenu a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+}
+.dropdowneunoColor:hover{
+    background-color: #bac0c5;
+}
+.dropdown:hover .dropdownMenu{
+    display: block;
+    background-color: white;
+}
+/*fim menu dropdown*/
+.voltar {
     display: grid;
     margin-left: 2%;
     padding: 4px;
@@ -48,6 +73,10 @@ a {
 }
 
 a:hover {
+    background-color: rgb(206, 195, 195);
+}
+    
+.voltar:hover {
     background-color: rgb(206, 195, 195);
 }
 
