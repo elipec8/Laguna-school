@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 html{
@@ -56,6 +57,7 @@ h1 {
     background-color: white;
 }
 /*fim menu dropdown*/
+
 .voltar {
     display: grid;
     margin-left: 2%;
@@ -90,7 +92,7 @@ a:hover {
     color: white;
     margin: 20px auto; 
     display: grid;
-    grid-auto-rows: 27% 27% 18%;
+    grid-auto-rows: 27% 55.9% 0% 15%;
 }
 
 i {
