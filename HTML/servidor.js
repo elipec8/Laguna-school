@@ -11,9 +11,9 @@ app.use(express.json()); // Permite que o servidor aceite dados no formato JSON
 // Configura as informações de conexão com o banco de dados MySQL
 const db = mysql.createConnection({
     host: '192.168.171.210', // Endereço do servidor de banco de dados
-    user: 'ariel', // Nome de usuário do banco de dados
-    password: 'arielsenai', // Senha do banco de dados
-    database: 'bd-ariel' // Nome do banco de dados que será utilizado
+    user: 'bd-majoras', // Nome de usuário do banco de dados
+    password: 'majoras@123', // Senha do banco de dados
+    database: 'bd-majoras' // Nome do banco de dados que será utilizado
 });
 
 // Conecta ao banco de dados MySQL
@@ -29,7 +29,8 @@ db.connect((err) => {
 // Cria uma rota para autenticar o usuário
 app.post('/autenticar', (req, res) => {
     // Extrai o nome e a senha enviados pelo cliente (index.html)
-    const { nome, senha } = req.body;
+    const {email, senha} = req.body;
+
 
     // Consulta SQL para verificar se o usuário e a senha existem no banco de dados
     const sql = 'SELECT * FROM usuario WHERE email = ? AND senha = ?';
