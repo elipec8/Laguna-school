@@ -58,6 +58,7 @@ select{
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
+    padding-left: 27px;
 
 }
 
@@ -66,6 +67,7 @@ select{
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
+    padding-left: 27px;
 }
 
 .usuario i{
@@ -73,6 +75,7 @@ select{
     color: rgb(0, 0, 0);
     margin-left: 8px;
     font-size: 20px;
+
 }
 
 .senha i{
@@ -82,7 +85,7 @@ select{
     font-size: 20px;
 }
 
-.ocupacao{
+.cargo{
     display: flex;
     align-items: center;
     width: fit-content;
@@ -103,6 +106,13 @@ select{
     margin-top: 15px;
     height: 20px;
     font-size: 15px;
+}
+
+
+h2{
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(201, 40, 40)
 }
 
 select{
