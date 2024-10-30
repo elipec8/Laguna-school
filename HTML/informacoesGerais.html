@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../CSS/style.css" >
+    <link rel="stylesheet" href="../CSS/styleInformacoesGerais.css" >
     <title>infomaçãoes gerais</title>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -12,13 +12,16 @@
 <body>
     <a class="botao" href="login.html"><i class='bx bx-left-arrow-alt'></i></a>
 
-    <div class="perfil" >
-        <img class="perfil" src="../img/perfil.png" >
-    </div>
-        <h2 class="foto">
-        foto de perfil
-    </h2>
-    
+
+    <form method="post" action="#" enctype="multipart/form-data">
+        <div class="perfil" >
+            <img src='https://static.vecteezy.com/system/resources/previews/020/911/730/non_2x/profile-icon-avatar-icon-user-icon-person-icon-free-png.png' id="img">
+            <input type="file" name="foto" id="foto" accept="image/*">
+        </div>
+            <h2 class="foto">
+            foto de perfil
+        </h2>
+    </form>
     <h3 class="gerais">
         infomaçãoes gerais:
     </h3>
@@ -64,7 +67,7 @@
 </html>
 
  <script>
-    const imagemDefault = '#';
+    const imagemDefault = 'https://static.vecteezy.com/system/resources/previews/020/911/730/non_2x/profile-icon-avatar-icon-user-icon-person-icon-free-png.png';
 
     const file = document.getElementById('foto');
     const img = document.getElementById('img');
