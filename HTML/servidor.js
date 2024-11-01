@@ -29,13 +29,13 @@ db.connect((err) => {
 // Cria uma rota para autenticar o usuário
 app.post('/autenticar', (req, res) => {
     // Extrai o nome e a senha enviados pelo cliente (index.html)
-    const {email, senha} = req.body;
+    const {email, senha, cargo} = req.body;
 
 
     // Consulta SQL para verificar se o usuário e a senha existem no banco de dados
-    const sql = 'SELECT * FROM usuario WHERE email = ? AND senha = ?';
+    const sql = 'SELECT * FROM usuario WHERE email = ? AND senha = ? AND cargo=?';
     // Executa a consulta no banco de dados, substituindo os ? pelos valores de nome e senha
-    db.query(sql, [email, senha], (err, results) => {
+    db.query(sql, [email, senha, cargo], (err, results) => {
         // Verifica se houve um erro na consulta
         if (err) {
             console.error('Erro ao consultar o banco de dados:', err); // Exibe o erro no console
@@ -43,7 +43,6 @@ app.post('/autenticar', (req, res) => {
             res.status(500).json({ sucesso: false, mensagem: 'Erro no servidor.' });
             return; // Interrompe a execução se houve um erro
         }
-
         // Verifica se a consulta retornou algum resultado (ou seja, usuário e senha válidos)
         if (results.length > 0) {
             res.json({ sucesso: true }); // Envia uma resposta de sucesso para o cliente
@@ -56,4 +55,5 @@ app.post('/autenticar', (req, res) => {
 // Inicia o servidor na porta 3000
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000'); // Exibe uma mensagem informando que o servidor está rodando
+    
 });
