@@ -1,10 +1,68 @@
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .perfil{
-    
     text-align: center;
 }
 .foto{
 text-align: center;
 color: white;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.h-100{
+    height: 100%;
+}
+
+/**/
+#form-form{
+    & .image-upload{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 4px solid white;
+        border-radius: 100%;
+        box-shadow: 2px 3px 12px #7988b6;
+        overflow: hidden;
+    }
+
+    & .image-upload img{
+        object-fit: cover;
+    }
+
+    & .image-upload i{
+        position: absolute;
+        margin: 0 auto;
+        font-size: 50px;
+        color: white;
+    }
+
+
+    & #image-field{
+        position: absolute;
+        margin: 0 auto;
+        border: #ffffff;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
 }
 
 body{
@@ -24,70 +82,88 @@ body{
     top: -30px;
 }
 
+#nome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;
+}
+
+#email{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;
+}
+
+#senha{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+}
+
+#telefone{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;
+}
+
 .nome{
-    position: relative;
     color: white;
-    right: -500px
+    margin: 0 auto;
 }
 
 .retangulo {
-    position: relative;
-    right: -580px;
-    top: -50px;
-    width: 900px;       /* largura */
+    margin-right: auto;
+    margin-left: 20px;
+    width: 50vw;       /* largura */
     height: 40px;      /* altura */
     background-color: rgba(0, 0, 0, 20%);
     border: 2px solid black; 
 }
 
 .email{
-    position: relative;
     color: white;
-    right: -500px
 }
 
 .senha{
-    position: relative;
+    margin: 0 auto;
     color: white;
-    right: -500px
 }
 
 .retangulo2{
-    position: relative;
-    right: -580px;
-    top: -50px;
-    width: 400px;       /* largura */
+    margin-right: auto;
+    margin-left: 20px;
+    width: 25vh;       /* largura */
     height: 40px;      /* altura */
     background-color: rgba(0, 0, 0, 20%);
     border: 2px solid black; 
 }
 
 .mudar{
-    position: relative;
-    top: -39px;
-    right: -900px;
+    margin-left: 220px;
+    display: block;
     color: white;
 }
 
 .telefone{
-    position: relative;
     color: white;
-    right: -500px;
-    width: 15px
 }
 
 
 .ocupação{
     position: relative;
     color: white;
-    right: -460px;
     width: 15px
 }
 
 .pais{
     position: relative;
     color: white;
-    right: -500px;
     width: 15px
 }
 
@@ -95,14 +171,12 @@ body{
 .cidade{
     position: relative;
     color: white;
-    right: -500px;
     width: 15px
 }
 
 
 .sair{
     position: relative;
-    right: -1500px;
     color: white;
 }
 
