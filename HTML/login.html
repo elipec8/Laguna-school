@@ -23,7 +23,7 @@
             <input type="text" id="senha" name="senha" placeholder="Senha">
         </div>
         <div class="cargo">
-            <select>
+            <select id="cargo">
                 <option></option>
                 <option>Professor</option>
                 <option>Aluno</option>
@@ -52,6 +52,7 @@
         e.preventDefault(); // Impede o comportamento padrão de enviar o formulário
         const email = document.getElementById("usuario").value; // Pega o valor digitado no campo de nome de usuário
         const senha = document.getElementById("senha").value; // Pega o valor digitado no campo de senha
+        const cargo = document.getElementById("cargo").value
 
         // Faz uma requisição  POST para o servidor, enviando o nome e a senha como um objetoJSON
         const res = await fetch('http://localhost:3000/autenticar', {
@@ -60,7 +61,7 @@
                 'Content-Type': 'application/json' // Define o tipo de conteúdo como JSON
             },
             // Converte o objeto { nome, senha } em uma string JSON e envia no corpo da requisição
-            body: JSON.stringify({ email: email, senha: senha })
+            body: JSON.stringify({ email: email, senha: senha, cargo: cargo })
         });
 
         // Espera pela resposta do servidor e converte a resposta em um objeto JSON
@@ -71,7 +72,7 @@
             window.location.href = "cadastroAtividade.html";
         } else {
             // Exibe uma mensagem de erro se o nome de usuário ou senha estiverem incorretos
-            document.getElementById("mensagem").textContent = "Usuário ou senha incorretos.";
+            document.getElementById("mensagem").textContent = "Usuário ou senha ou cargo incorretos.";
         }
     };
 </script>
