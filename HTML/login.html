@@ -67,11 +67,17 @@
         // Espera pela resposta do servidor e converte a resposta em um objeto JSON
         const data = await res.json();
         // Verifica se o login foi bem-sucedido
+        // Verifica o cargo do usuário e redireciona conforme necessário
         if (data.sucesso) {
-            // Redireciona para uma página de acesso autorizado
-            window.location.href = "cadastroAtividade.html";
+            if (cargo === 'Aluno') {
+                // Redireciona para a página de cadastro de atividades para alunos
+                window.location.href = "cadastroAtividade.html";
+            } else if (cargo === 'Professor') {
+                // Redireciona para a página de edição de atividades para professores
+                window.location.href = "editarAtividade.html";
+            }
         } else {
-            // Exibe uma mensagem de erro se o nome de usuário ou senha estiverem incorretos
+            // Exibe uma mensagem de erro se o nome de usuário, senha ou cargo estiverem incorretos
             document.getElementById("mensagem").textContent = "Usuário ou senha ou cargo incorretos.";
         }
     };
