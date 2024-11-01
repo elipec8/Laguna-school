@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*cabeçalho*/
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+}
+/*cabeçalho*/
+
+/*menu dropdown*/
+.dropdown{
+    list-style-type: none;
+}
+.dropdownMenu{
+    position: absolute;
+    display: none;
+    margin-left: 15px;
+}
+.dropdownMenu a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+}
+.dropdowneunoColor:hover{
+    background-color: #bac0c5;
+}
+.dropdown:hover .dropdownMenu{
+    display: block;
+    background-color: white;
+}
+.tela{
+    width: 99.7vw;
+    height:85.8vh;
+    border:2px solid black;
+    display:flex;
+    gap: 10%; 
+    justify-content: center;
+}
+
+
+
+.boxperfil{
+     width: 30vw;
+     height:20%;
+     border:2px solid black;
+     background-color:rgba(0,0,0,15%) ;
+    
+
+}
+.boxperfil2{
+    width:30vw;
+    height:80%;
+    border:2px solid black;
+    margin-top: 2%;
+    background-color:rgba(0,0,0,15%) ;
+    
+    
+    
+}
+
+.boxperfil3{
+    width:30vw;
+    height:20%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,15%) ;
+   
+
+}
+.boxperfil4{
+   width:30vw;
+    height:80%;
+    border:2px solid black;
+    margin-top: 2%;
+    background-color:black;
+    opacity: 0.1;
+    
+}
+
+
+
+
+#tela1{
+    width: 30%;
+    height: 40%;
+    
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+.tela2{
+    width: 30%;
+    height: 40%;
+    margin-top: 5%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+html
