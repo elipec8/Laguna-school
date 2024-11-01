@@ -21,10 +21,8 @@ document.getElementById("loginForm").onsubmit = async function(e) {
     // Verifica o cargo do usuário e redireciona conforme necessário
     if (data.sucesso) {
         if (cargo === 'Aluno') {
-            // Redireciona para a página de cadastro de atividades para alunos
             window.location.href = "cadastroAtividade.html";
         } else if (cargo === 'Professor') {
-            // Redireciona para a página de edição de atividades para professores
             window.location.href = "editarAtividade.html";
         }
     } else {
