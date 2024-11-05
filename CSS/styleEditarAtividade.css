@@ -71,9 +71,9 @@ h1 {
 
 .boxperfil{
      width: 30vw;
-     height:20%;
+     height:30%;
      border:2px solid black;
-     background-color:rgba(0,0,0,15%) ;
+     background-color:rgba(0,0,0,30%) ;
     
 
 }
@@ -82,7 +82,7 @@ h1 {
     height:80%;
     border:2px solid black;
     margin-top: 2%;
-    background-color:rgba(0,0,0,15%) ;
+    background-color:rgba(0,0,0,30%) ;
     
     
     
@@ -90,9 +90,9 @@ h1 {
 
 .boxperfil3{
     width:30vw;
-    height:20%;
+    height:30%;
     border:2px solid black;
-    background-color:rgba(0,0,0,15%) ;
+    background-color:rgba(0,0,0,30%) ;
    
 
 }
@@ -101,8 +101,8 @@ h1 {
     height:80%;
     border:2px solid black;
     margin-top: 2%;
-    background-color:black;
-    opacity: 0.1;
+    background-color:rgba(0,0,0,30%) ;
+   
     
 }
 
@@ -130,5 +130,32 @@ h1 {
     justify-content: center;
 
 }
+body{
+    background-image: url('../IMG/majora.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 
-html
+.quadrado1{
+    width:30vw;
+    height:30%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,30%) ;
+    margin-bottom: 12%;
+   
+
+
+}
+.quadrado2{
+    width:30vw;
+    height:30%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,30%) ;
+    margin-bottom: 12%;
+   
+
+
+}
+
+
+
