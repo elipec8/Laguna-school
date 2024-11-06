@@ -81,6 +81,27 @@ app.post('/cadastro', (req, res) => {
     });
 });
 
+
+app.post('/editar', (req, res) => {
+    const sql = 'SELECT * FROM atividade';
+
+    
+    con.query(sql, [sql], (err, results) => {
+        // Verifica se houve um erro na consulta
+        if (err) {
+            console.error('Erro ao consultar o banco de dados:', err); // Exibe o erro no console
+            // Responde ao cliente informando que houve um erro no servidor
+            res.status(500).json({ sucesso: false, mensagem: 'Erro no servidor.' });
+            return; // Interrompe a execução se houve um erro
+        }
+        else{
+            console.log(results)
+        }
+    
+    });
+    
+})
+
 // Inicia o servidor na porta 3000
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000'); // Exibe uma mensagem informando que o servidor está rodando
