@@ -112,6 +112,45 @@ body{
     margin-left: 18px;
 }
 
+
+#telefone{
+    position: relative;
+    left: -40px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;
+}
+
+#ocupacao{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;
+}
+
+#pais{
+    position: relative;
+    left: 23px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;
+}
+
+#cidade{
+    position: relative;
+    left: 12px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 18px;  
+}
+
 .nome{
     color: white;
     margin: 0 auto;
