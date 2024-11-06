@@ -1,4 +1,4 @@
-/ Evento de submissão do formulário
+// Evento de submissão do formulário
 document.getElementById("loginForm").onsubmit = async function(e) {
     e.preventDefault(); // Impede o comportamento padrão de enviar o formulário
     const email = document.getElementById("usuario").value; // Pega o valor digitado no campo de nome de usuário
