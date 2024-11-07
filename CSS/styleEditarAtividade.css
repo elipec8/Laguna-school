@@ -131,9 +131,10 @@ h1 {
 
 }
 body{
-    background-image: url('../IMG/majora.png');
+    background-image: url('../IMG/majoras.png');
     background-size:cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .quadrado1{
@@ -200,6 +201,7 @@ ul li.item-menu{
 }
 
 ul li.item-menu:hover{
+
     background: #38739D;
 }
 
@@ -213,7 +215,7 @@ ul li.item-menu a{
     line-height: 40px;
 }
 
-ul it.item-menu a .txt-link{
+ul li.item-menu a .txt-link{
     margin-left: 40px;
 }
 
