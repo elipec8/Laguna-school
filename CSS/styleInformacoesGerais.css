@@ -1,4 +1,3 @@
-
 .informacoes{
     display: flex;
     flex-direction: column;
@@ -104,13 +103,6 @@ body{
     margin-left: 18px;
 }
 
-#telefone{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;
-}
 
 
 #telefone{
@@ -195,27 +187,27 @@ body{
 
 
 .ocupação{
-    position: relative;
+
     color: white;
-    width: 15px
+  
+    
 }
 
 .pais{
-    position: relative;
+ 
     color: white;
-    width: 15px
+
 }
 
 
 .cidade{
-    position: relative;
+   
     color: white;
-    width: 15px
 }
 
 
 .sair{
-    position: relative;
+
     color: white;
 }
 
