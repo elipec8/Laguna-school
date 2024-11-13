@@ -82,11 +82,15 @@ app.post('/cadastro', (req, res) => {
 });
 
 
-app.post('/editar', (req, res) => {
-    const sql = 'SELECT * FROM atividade';
-
+/* app.put('/editar', (req, res) => {
     
-    con.query(sql, [sql], (err, results) => {
+    const {titulo, descricao, dataEntrega} = req.body;
+
+
+    // Consulta SQL para verificar se o usuário e a senha existem no banco de dados
+    const sql = 'UPDATE atividade SET titulo = ?, descricao = ?, dataEntrega = ? WHERE Id = 27';
+    // Executa a consulta no banco de dados, substituindo os ? pelos valores de nome e senha
+    db.query(sql, [titulo, descricao, dataEntrega], (err, results) => {
         // Verifica se houve um erro na consulta
         if (err) {
             console.error('Erro ao consultar o banco de dados:', err); // Exibe o erro no console
@@ -94,17 +98,75 @@ app.post('/editar', (req, res) => {
             res.status(500).json({ sucesso: false, mensagem: 'Erro no servidor.' });
             return; // Interrompe a execução se houve um erro
         }
-        else{
-            console.log(results)
-        }
-    
+        // Verifica se a consulta retornou algum resultado (ou seja, usuário e senha válidos)
+
+       
+            if(results.affectedRows > 0)
+                res.json({ sucesso: true }); // Envia uma resposta de sucesso para o cliente
+            else 
+                res.json({ sucesso: false }); // Envia uma resposta de falha para o cliente
+            
+
     });
-    
-})
+});
 
 // Inicia o servidor na porta 3000
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000'); // Exibe uma mensagem informando que o servidor está rodando
-    
-    
+}); */
+
+
+
+
+// Rota para listar todas as atividades
+app.get('/atividades', (req, res) => {
+    const sql = 'SELECT * FROM atividade'; // Tabela 'atividade'
+    db.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro no banco de dados' });
+        }
+        res.json(results); // Retorna todas as atividades
+    });
+});
+
+// Rota para obter os dados da atividade pelo ID
+app.get('/atividade/:id', (req, res) => { //rota para pegar os dados da atividade com o id na URL
+    const id = req.params.id; //acessa o parâmetro da URL, pegando o id
+
+    const sql = 'SELECT * FROM atividade WHERE Id = ?'; // Usando a coluna 'Id'
+    db.query(sql, [id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro no banco de dados' });
+        }
+
+        if (results.length > 0) {
+            res.json(results[0]); // Retorna os dados da atividade
+        } else {
+            res.status(404).json({ erro: 'Atividade não encontrada' });
+        }
+    });
+});
+
+// Rota para editar a atividade
+app.put('/editar/:id', (req, res) => {
+    const { titulo, descricao, dataEntrega } = req.body;
+    const id = req.params.id;
+
+    const sql = 'UPDATE atividade SET titulo = ?, descricao = ?, dataEntrega = ? WHERE Id = ?'; // Atualiza a tabela 'atividade'
+    db.query(sql, [titulo, descricao, dataEntrega, id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro ao editar atividade' });
+        }
+
+        if (results.affectedRows > 0) {
+            res.json({ sucesso: true });
+        } else {
+            res.status(404).json({ erro: 'Atividade não encontrada' });
+        }
+    });
+});
+
+// Porta do servidor
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000');
 });
