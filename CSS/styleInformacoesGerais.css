@@ -23,47 +23,9 @@ color: white;
     align-items: center;
 }
 
-.w-100{
-    width: 100%;
-}
-
-.h-100{
-    height: 100%;
-}
-
-/**/
-#form-form{
-    & .image-upload{
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border: 4px solid white;
-        border-radius: 100%;
-        box-shadow: 2px 3px 12px #7988b6;
-        overflow: hidden;
-    }
-
-    & .image-upload img{
-        object-fit: cover;
-    }
-
-    & .image-upload i{
-        position: absolute;
-        margin: 0 auto;
-        font-size: 50px;
-        color: white;
-    }
 
 
-    & #image-field{
-        position: absolute;
-        margin: 0 auto;
-        border: #ffffff;
-        width: 100px;
-        height: 100px;
-        opacity: 0;
-    }
-}
+
 
 body{
     background-color: rgb(46, 96, 130)
@@ -296,4 +258,12 @@ h3{
     margin-left: 1%;
     text-decoration:underline;
     color: #ffffff;
+}
+
+.bx_bx-user-circle{
+    font-size:large;
+}
+
+#perfil{
+    font-size: 500px;
 }
