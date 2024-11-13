@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
         }
-        #atividadesList {
+        #listaAtividades {
             margin: 10px 0;
             color: red;
         }
@@ -27,7 +28,7 @@
     <h1>Lista de Atividades</h1>
 
     <!-- Vamos popular a lista de atividades dinamicamente com JavaScript -->
-    <div id="atividadesList"></div>
+    <div id="listaAtividades"></div>
 
     <script>
         // Função para carregar atividades do banco de dados
@@ -36,18 +37,18 @@
                 const response = await fetch('http://localhost:3000/atividades');
                 const atividades = await response.json();
 
-                const atividadesList = document.getElementById('atividadesList'); //id onde sera feito a lista
-                atividadesList.innerHTML = ''; // Limpa a lista antes de adicionar os itens
+                const listaAtividades = document.getElementById('listaAtividades'); //id onde sera feito a lista
+                listaAtividades.innerHTML = ''; // Limpa a lista antes de adicionar os itens
 
                 atividades.forEach(atividade => { //itera as atividades em uma lista
                     const div = document.createElement('div'); 
                     div.classList.add('atividade');
                     div.innerHTML  = ` 
                         <p>${atividade.titulo} 
-                            <a href="editar.html?id=${atividade.Id}" class="link-atividade">Editar</a>
+                            <a href="editarAtividade.html?id=${atividade.Id}" class="link-atividade"><i class='bx bx-edit-alt'></i></a>
                         </p> 
                     `; //cria uma nova div para cada atividade, com título e um link de editar com o id
-                    atividadesList.appendChild(div); //adiciona as novas div na lista
+                    listaAtividades.appendChild(div); //adiciona as novas div na lista
                 });
             } catch (error) {
                 console.error('Erro ao carregar atividades:', error);
