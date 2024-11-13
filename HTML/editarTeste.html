@@ -40,30 +40,30 @@
 
     <script>
         // Função para pegar o parâmetro 'id' da URL
-        function getUrlParameter(name) { //captura o valor do parâmetro da URL
+        function getUrlParameter(name) {  //captura o valor do parâmetro da URL
             const urlParams = new URLSearchParams(window.location.search); //cria um objeto, usa uma API que acessa a consulta do parâmetro
-            return urlParams.get(name);
+            return urlParams.get(name); //retorna o valor do parâmetro (id)
         }
 
         // Ao carregar a página, pegar o ID da URL e buscar os dados da atividade
-        async function carregarAtividade() {
+        async function carregarAtividade() { 
             const id = getUrlParameter('id'); // Pega o 'id' da URL
-            if (!id) {
+            if (!id) { 
                 alert("ID da atividade não encontrado.");
                 return;
-            }
+            } //se não exisitr o id aparece um alerta e cancela a execução
 
             try {
-                // Faz uma requisição para o servidor para pegar os dados da atividade
+                // Faz uma requisição para o servidor para pegar os dados da atividade, usando o id fornecido anteriormente
                 const response = await fetch(`http://localhost:3000/atividade/${id}`);
-                const data = await response.json();
+                const data = await response.json(); //converte para json
 
                 if (data.erro) {
                     alert("Erro ao buscar a atividade.");
                     return;
                 }
 
-                // Preenche os campos do formulário com os dados da atividade
+                // Preenche os campos do formulário com os dados da atividade, puxados pelo id fornecido anteriormente
                 document.getElementById('titulo').value = data.titulo;
                 document.getElementById('descricao').value = data.descricao;
                 document.getElementById('dataEntrega').value = data.dataEntrega;
@@ -87,7 +87,7 @@
 
             try {
                 const response = await fetch(`http://localhost:3000/editar/${id}`, {
-                    method: 'PUT',
+                    method: 'PUT', //método para atulizar os dados já existentes
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -97,16 +97,22 @@
                 const data = await response.json();
 
                 if (data.sucesso) {
-                    alert('Atividade atualizada com sucesso!');
-                    window.location.href = 'index.html';  // Redireciona de volta para a página principal
+                    alert('Atividade atualizada com sucesso!'); //pop-up com a mensagem de sucesso
+                    window.location.href = 'teste.html';  // Redireciona de volta para a página principal
                 } else {
-                    alert('Erro ao atualizar a atividade.');
+                    alert('Erro ao atualizar a atividade.'); //pop-up com a mensagem de erro
                 }
             } catch (error) {
                 console.error('Erro ao editar a atividade:', error);
                 alert('Erro ao editar a atividade.');
             }
         };
+
+        /*  Quando o usuário clica no link de "editar", ele é redirecionado para editar.html?id=27 (por exemplo).
+            A página faz uma requisição GET para buscar os dados da atividade com o id fornecido na URL.
+            O formulário é preenchido com os dados da atividade, e o usuário pode editá-los.
+            Ao enviar o formulário, uma requisição PUT é feita para o servidor com os dados atualizados.
+            Se a atualização for bem-sucedida, o usuário é redirecionado para a página principal. */
     </script>
 </body>
 </html>
