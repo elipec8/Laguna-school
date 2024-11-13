@@ -1,67 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        #atividadesList {
-            margin: 10px 0;
-            color: red;
-        }
-        .link-atividade {
-            color: #007BFF;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        .link-atividade:hover {
-            color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Lista de Atividades</h1>
+// Função para pegar o parâmetro 'id' da URL
+function getUrlParameter(name) {  //captura o valor do parâmetro da URL
+    const urlParams = new URLSearchParams(window.location.search); //cria um objeto, usa uma API que acessa a consulta do parâmetro
+    return urlParams.get(name); //retorna o valor do parâmetro (id)
+}
 
-    <!-- Vamos popular a lista de atividades dinamicamente com JavaScript -->
-    <div id="atividadesList"></div>
+// Ao carregar a página, pegar o ID da URL e buscar os dados da atividade
+async function carregarAtividade() { 
+    const id = getUrlParameter('id'); // Pega o 'id' da URL
+    if (!id) { 
+        alert("ID da atividade não encontrado.");
+        return;
+    } //se não exisitr o id aparece um alerta e cancela a execução
 
-    <script>
-        // Função para carregar atividades do banco de dados
-        async function carregarAtividades() { //função para requisição no servidor
-            try {
-                const response = await fetch('http://localhost:3000/atividades');
-                const atividades = await response.json();
+    try {
+        // Faz uma requisição para o servidor para pegar os dados da atividade, usando o id fornecido anteriormente
+        const response = await fetch(`http://localhost:3000/atividade/${id}`);
+        const data = await response.json(); //converte para json
 
-                const atividadesList = document.getElementById('atividadesList'); //id onde sera feito a lista
-                atividadesList.innerHTML = ''; // Limpa a lista antes de adicionar os itens
-
-                atividades.forEach(atividade => { //itera as atividades em uma lista
-                    const div = document.createElement('div'); 
-                    div.classList.add('atividade');
-                    div.innerHTML  = ` 
-                        <p>${atividade.titulo} 
-                            <a href="editarAtividade.html?id=${atividade.Id}" class="link-atividade">Editar</a>
-                        </p> 
-                    `; //cria uma nova div para cada atividade, com título e um link de editar com o id
-                    atividadesList.appendChild(div); //adiciona as novas div na lista
-                });
-            } catch (error) {
-                console.error('Erro ao carregar atividades:', error);
-                alert('Erro ao carregar as atividades.');
-            }
+        if (data.erro) {
+            alert("Erro ao buscar a atividade.");
+            return;
         }
 
-        // Chama a função para carregar as atividades assim que a página for carregada
-        window.onload = carregarAtividades;
+        // Preenche os campos do formulário com os dados da atividade, puxados pelo id fornecido anteriormente
+        document.getElementById('titulo').value = data.titulo;
+        document.getElementById('descricao').value = data.descricao;
+        document.getElementById('dataEntrega').value = data.dataEntrega;
+    } catch (error) {
+        console.error('Erro ao carregar dados da atividade:', error);
+        alert("Erro ao carregar os dados da atividade.");
+    }
+}
 
-        /* Quando a página é carregada, uma requisição GET é feita para o servidor para buscar todas as atividades.
-            As atividades são exibidas com um link para editar cada uma, passando o id da atividade na URL. */
+// Chama a função quando a página for carregada
+window.onload = carregarAtividade;
 
-    </script>
-</body>
-</html>
+// Ao enviar o formulário, envia os dados atualizados para o servidor
+document.getElementById('editarForm').onsubmit = async function (e) {
+    e.preventDefault(); // Previne o comportamento padrão de envio do formulário
 
+    const id = getUrlParameter('id'); // Pega o ID da URL novamente
+    const titulo = document.getElementById('titulo').value;
+    const descricao = document.getElementById('descricao').value;
+    const dataEntrega = document.getElementById('dataEntrega').value;
+
+    try {
+        const response = await fetch(`http://localhost:3000/editar/${id}`, {
+            method: 'PUT', //método para atulizar os dados já existentes
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ titulo, descricao, dataEntrega })
+        });
+
+        const data = await response.json();
+
+        if (data.sucesso) {
+            alert('Atividade atualizada com sucesso!'); //pop-up com a mensagem de sucesso
+            window.location.href = 'teste.html';  // Redireciona de volta para a página principal
+        } else {
+            alert('Erro ao atualizar a atividade.'); //pop-up com a mensagem de erro
+        }
+    } catch (error) {
+        console.error('Erro ao editar a atividade:', error);
+        alert('Erro ao editar a atividade.');
+    }
+};
+
+/*  Quando o usuário clica no link de "editar", ele é redirecionado para editar.html?id=27 (por exemplo).
+    A página faz uma requisição GET para buscar os dados da atividade com o id fornecido na URL.
+    O formulário é preenchido com os dados da atividade, e o usuário pode editá-los.
+    Ao enviar o formulário, uma requisição PUT é feita para o servidor com os dados atualizados.
+    Se a atualização for bem-sucedida, o usuário é redirecionado para a página principal. */
