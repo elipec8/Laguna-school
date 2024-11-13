@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Atividade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Editar Atividade</h1>
+
+    <!-- Formulário de edição -->
+    <form id="editarForm">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <label for="dataEntrega">Data de Entrega</label>
+        <input type="datetime-local" id="dataEntrega" name="dataEntrega" required>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <script>
+        // Função para pegar o parâmetro 'id' da URL
+        function getUrlParameter(name) { //captura o valor do parâmetro da URL
+            const urlParams = new URLSearchParams(window.location.search); //cria um objeto, usa uma API que acessa a consulta do parâmetro
+            return urlParams.get(name);
+        }
+
+        // Ao carregar a página, pegar o ID da URL e buscar os dados da atividade
+        async function carregarAtividade() {
+            const id = getUrlParameter('id'); // Pega o 'id' da URL
+            if (!id) {
+                alert("ID da atividade não encontrado.");
+                return;
+            }
+
+            try {
+                // Faz uma requisição para o servidor para pegar os dados da atividade
+                const response = await fetch(`http://localhost:3000/atividade/${id}`);
+                const data = await response.json();
+
+                if (data.erro) {
+                    alert("Erro ao buscar a atividade.");
+                    return;
+                }
+
+                // Preenche os campos do formulário com os dados da atividade
+                document.getElementById('titulo').value = data.titulo;
+                document.getElementById('descricao').value = data.descricao;
+                document.getElementById('dataEntrega').value = data.dataEntrega;
+            } catch (error) {
+                console.error('Erro ao carregar dados da atividade:', error);
+                alert("Erro ao carregar os dados da atividade.");
+            }
+        }
+
+        // Chama a função quando a página for carregada
+        window.onload = carregarAtividade;
+
+        // Ao enviar o formulário, envia os dados atualizados para o servidor
+        document.getElementById('editarForm').onsubmit = async function (e) {
+            e.preventDefault(); // Previne o comportamento padrão de envio do formulário
+
+            const id = getUrlParameter('id'); // Pega o ID da URL novamente
+            const titulo = document.getElementById('titulo').value;
+            const descricao = document.getElementById('descricao').value;
+            const dataEntrega = document.getElementById('dataEntrega').value;
+
+            try {
+                const response = await fetch(`http://localhost:3000/editar/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ titulo, descricao, dataEntrega })
+                });
+
+                const data = await response.json();
+
+                if (data.sucesso) {
+                    alert('Atividade atualizada com sucesso!');
+                    window.location.href = 'index.html';  // Redireciona de volta para a página principal
+                } else {
+                    alert('Erro ao atualizar a atividade.');
+                }
+            } catch (error) {
+                console.error('Erro ao editar a atividade:', error);
+                alert('Erro ao editar a atividade.');
+            }
+        };
+    </script>
+</body>
+</html>
