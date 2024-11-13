@@ -82,41 +82,6 @@ app.post('/cadastro', (req, res) => {
 });
 
 
-/* app.put('/editar', (req, res) => {
-    
-    const {titulo, descricao, dataEntrega} = req.body;
-
-
-    // Consulta SQL para verificar se o usuário e a senha existem no banco de dados
-    const sql = 'UPDATE atividade SET titulo = ?, descricao = ?, dataEntrega = ? WHERE Id = 27';
-    // Executa a consulta no banco de dados, substituindo os ? pelos valores de nome e senha
-    db.query(sql, [titulo, descricao, dataEntrega], (err, results) => {
-        // Verifica se houve um erro na consulta
-        if (err) {
-            console.error('Erro ao consultar o banco de dados:', err); // Exibe o erro no console
-            // Responde ao cliente informando que houve um erro no servidor
-            res.status(500).json({ sucesso: false, mensagem: 'Erro no servidor.' });
-            return; // Interrompe a execução se houve um erro
-        }
-        // Verifica se a consulta retornou algum resultado (ou seja, usuário e senha válidos)
-
-       
-            if(results.affectedRows > 0)
-                res.json({ sucesso: true }); // Envia uma resposta de sucesso para o cliente
-            else 
-                res.json({ sucesso: false }); // Envia uma resposta de falha para o cliente
-            
-
-    });
-});
-
-// Inicia o servidor na porta 3000
-app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000'); // Exibe uma mensagem informando que o servidor está rodando
-}); */
-
-
-
 
 // Rota para listar todas as atividades
 app.get('/atividades', (req, res) => {
@@ -148,9 +113,9 @@ app.get('/atividade/:id', (req, res) => { //rota para pegar os dados da atividad
 });
 
 // Rota para editar a atividade
-app.put('/editar/:id', (req, res) => {
+app.put('/editar/:id', (req, res) => { //define a rota apara atualizar os dados
     const { titulo, descricao, dataEntrega } = req.body;
-    const id = req.params.id;
+    const id = req.params.id; //puxa o id da atividade que vai atualizar
 
     const sql = 'UPDATE atividade SET titulo = ?, descricao = ?, dataEntrega = ? WHERE Id = ?'; // Atualiza a tabela 'atividade'
     db.query(sql, [titulo, descricao, dataEntrega, id], (err, results) => {
