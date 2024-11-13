@@ -4,6 +4,7 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    width:60%
 }
 
 
@@ -65,152 +66,8 @@ color: white;
 }
 
 body{
-    background-color: rgb(46, 96, 130);
+    background-color: rgb(46, 96, 130)
 }
-
-.gerais{
-    position: relative;
-    color: white;
-    right: -30px;
-    top: -30px;
-}
-
-.linha{
-    position: relative;
-    width: 97%;
-    top: -30px;
-}
-
-#nome{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;
-}
-
-#email{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;
-}
-
-#senha{
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    margin-left: 18px;
-}
-
-
-
-#telefone{
-    position: relative;
-    left: -40px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;
-}
-
-#ocupacao{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;
-}
-
-#pais{
-    position: relative;
-    left: 23px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;
-}
-
-#cidade{
-    position: relative;
-    left: 12px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 18px;  
-}
-
-.nome{
-    color: white;
-    margin: 0 auto;
-}
-
-.retangulo {
-    margin-right: auto;
-    margin-left: 20px;
-    width: 50vw;       /* largura */
-    height: 40px;      /* altura */
-    background-color: rgba(0, 0, 0, 20%);
-    border: 2px solid black; 
-}
-
-.email{
-    color: white;
-}
-
-.senha{
-    margin: 0 auto;
-    color: white;
-}
-
-.retangulo2{
-    margin-right: auto;
-    margin-left: 20px;
-    width: 25vh;       /* largura */
-    height: 40px;      /* altura */
-    background-color: rgba(0, 0, 0, 20%);
-    border: 2px solid black; 
-}
-
-.mudar{
-    margin-left: 220px;
-    display: block;
-    color: white;
-}
-
-.telefone{
-    color: white;
-}
-
-
-.ocupação{
-
-    color: white;
-  
-    
-}
-
-.pais{
- 
-    color: white;
-
-}
-
-
-.cidade{
-   
-    color: white;
-}
-
-
-.sair{
-
-    color: white;
-}
-
 
 
 
@@ -248,4 +105,195 @@ a:hover{
     color: #000000;
     box-shadow: 2px 2px 2px #000;
     width: fit-content;
+}
+
+.tela{
+    width:98vw;
+    height:98vh;
+    display:flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.info{
+     width:80%;
+     height:10%;
+    
+     margin-top:2%;
+     display:flex;
+     align-items:end;
+     justify-content: center;
+     
+     
+
+}
+.nome{
+    width:80%;
+     height:10%;
+
+
+}
+.linha{
+    width:80%;
+     height:10%;
+}
+
+.nome{
+    width:80%;
+     height:10%;
+  
+     display:flex;
+     align-items: center;
+
+     
+
+}
+
+.email{
+    width:80%;
+     height:10%;
+    
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.senha{
+    width:80%;
+     height:10%;
+     
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.telefone{
+    width:80%;
+     height:10%;
+
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.ocupacao{
+    width:80%;
+     height:10%;
+     display:flex;
+     align-items: center;
+     margin-left: -2%;
+
+}
+
+.pais{
+    width:80%;
+     height:10%;
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.cidade{
+    width:80%;
+     height:10%;
+     display:flex;
+     align-items: center;
+     
+
+}
+.textoup{
+    
+    color:white;
+  
+}
+.linha1{
+    border:1px solid#ffffff;
+    width:100%
+}
+
+.boxnome{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 1%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxemail{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 0.7%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxsenha{
+    width:35%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 1%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxtelefone{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 0%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxocupacao{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 0.4%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+.boxpais{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 20%);
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 2.2%;
+}
+.boxcidade{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 1%;
+   background-color: rgba(0, 0, 0, 20%);
+}   
+
+.ft{
+    text-align: center;
+    color: #ffffff ;
+    
+}
+
+h3{
+    color: #ffffff;
+}
+.mudar-senha{
+    display: flex;
+    margin-left: 1%;
+    text-decoration:underline;
+    color: #ffffff;
 }
