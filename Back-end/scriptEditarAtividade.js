@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #atividadesList {
+            margin: 10px 0;
+            color: red;
+        }
+        .link-atividade {
+            color: #007BFF;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .link-atividade:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Atividades</h1>
+
+    <!-- Vamos popular a lista de atividades dinamicamente com JavaScript -->
+    <div id="atividadesList"></div>
+
+    <script>
+        // Função para carregar atividades do banco de dados
+        async function carregarAtividades() { //função para requisição no servidor
+            try {
+                const response = await fetch('http://localhost:3000/atividades');
+                const atividades = await response.json();
+
+                const atividadesList = document.getElementById('atividadesList'); //id onde sera feito a lista
+                atividadesList.innerHTML = ''; // Limpa a lista antes de adicionar os itens
+
+                atividades.forEach(atividade => { //itera as atividades em uma lista
+                    const div = document.createElement('div'); 
+                    div.classList.add('atividade');
+                    div.innerHTML  = ` 
+                        <p>${atividade.titulo} 
+                            <a href="editarAtividade.html?id=${atividade.Id}" class="link-atividade">Editar</a>
+                        </p> 
+                    `; //cria uma nova div para cada atividade, com título e um link de editar com o id
+                    atividadesList.appendChild(div); //adiciona as novas div na lista
+                });
+            } catch (error) {
+                console.error('Erro ao carregar atividades:', error);
+                alert('Erro ao carregar as atividades.');
+            }
+        }
+
+        // Chama a função para carregar as atividades assim que a página for carregada
+        window.onload = carregarAtividades;
+
+        /* Quando a página é carregada, uma requisição GET é feita para o servidor para buscar todas as atividades.
+            As atividades são exibidas com um link para editar cada uma, passando o id da atividade na URL. */
+
+    </script>
+</body>
+</html>
 
