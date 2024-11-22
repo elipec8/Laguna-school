@@ -135,8 +135,8 @@ body{
     background-image: url('../IMG/majoras.png');
     background-size:cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
+    
 }
 
 .quadrado1{
@@ -179,7 +179,7 @@ nav.menu-lateral{
     bottom: 20%;
     align-self: flex-start;
     margin-left: -7.2%;
-    overflow-y: scroll;
+    
 }
 
 .btn-expandir{
@@ -214,7 +214,6 @@ ul li.item-menu a{
     font-size: 20px;
     padding: 20px 4%;
     display: flex;
-    margin-bottom: 10px;
     line-height: 40px;
 }
 
@@ -226,8 +225,4 @@ ul it.item-menu a .icon > i{
 
 
 
-}
-
-a{
-    margin-top: 9%;
 }
