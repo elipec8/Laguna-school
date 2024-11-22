@@ -156,4 +156,3 @@ app.delete('/atividade/:id', (req, res) => {
     });
 });
     
-    
