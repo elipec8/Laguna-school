@@ -102,6 +102,7 @@ app.get('/atividade/:id', (req, res) => { //rota para pegar os dados da atividad
     db.query(sql, [id], (err, results) => {
         if (err) {
             return res.status(500).json({ erro: 'Erro no banco de dados' });
+  
         }
 
         if (results.length > 0) {
@@ -135,3 +136,24 @@ app.put('/editar/:id', (req, res) => { //define a rota apara atualizar os dados
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
 });
+
+
+// Rota para excluir uma atividade pelo ID
+app.delete('/atividade/:id', (req, res) => {
+    const id = req.params.id;
+
+    const sql = 'DELETE FROM atividade WHERE Id = ?';
+    db.query(sql, [id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro no banco de dados' });
+        }
+
+        if (results.affectedRows > 0) {
+            res.json({ sucesso: true, mensagem: 'Atividade excluída com sucesso' });
+        } else {
+            res.status(404).json({ erro: 'Atividade não encontrada' });
+        }
+    });
+});
+    
+    
