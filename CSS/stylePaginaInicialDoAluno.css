@@ -25,12 +25,14 @@ h1 {
     font-family: "Montaga", serif;
     font-weight: 400;
     font-size: 50px;
+    
 }
 
 #perfil {
     font-size: 80px;
     margin-left: auto; 
     color: #ffffff;
+    margin-top: -15px;
 }
 /*cabeçalho*/
 
@@ -61,7 +63,6 @@ h1 {
 .tela{
     width: 99.7vw;
     height:85.8vh;
-    border:2px solid black;
     display:flex;
     gap: 10%; 
     justify-content: center;
@@ -135,6 +136,7 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .quadrado1{
@@ -152,8 +154,8 @@ h3 {
     font-weight: 400;
     font-size: 30px;
     text-align: center;
-    align-items: center;
     justify-content: center;
+    margin-top: 5%;
 }
 .quadrado2{
     width:30vw;
@@ -177,6 +179,7 @@ nav.menu-lateral{
     bottom: 20%;
     align-self: flex-start;
     margin-left: -7.2%;
+    overflow-y: scroll;
 }
 
 .btn-expandir{
@@ -223,4 +226,8 @@ ul it.item-menu a .icon > i{
 
 
 
+}
+
+a{
+    margin-top: 9%;
 }
