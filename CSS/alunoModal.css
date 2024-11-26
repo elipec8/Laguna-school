@@ -28,6 +28,14 @@ h1 {
     
 }
 
+h2 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 25px;
+    
+}
+
 #perfil {
     font-size: 80px;
     margin-left: auto; 
@@ -203,10 +211,44 @@ dialog {
     align-self: center;
     margin: 0 auto;
     padding: 1rem;
+    background-color: #38739D;
+    margin-top: 150px;
 }
 
 #adicionar-lista {
+     
     align-self: center;
-    width: 50px;
+    width: 200px;
     height: 50px;
+    background-color:rgba(0, 0, 0, 0.288);
+    color:#ffffff
 }
+
+button {
+    color: rgb(0, 0, 0);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 25px;
+    align-self: baseline;
+    border: none;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
+    width: 850px;
+    padding: 10px;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    margin: 0 auto;
+}
+
+.botao-transparente {
+    background: transparent;  /* Deixa o fundo transparente */
+    border: none;             /* Remove a borda do botão */
+    color: #ffffff;              /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;         /* Altera o cursor para a mãozinha ao passar o mouse */
+  }
+  
+  .botao-transparente:hover {
+    color: #a7aaad;        
+  }
