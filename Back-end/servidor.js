@@ -132,11 +132,6 @@ app.put('/editar/:id', (req, res) => { //define a rota apara atualizar os dados
     });
 });
 
-// Porta do servidor
-app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000');
-});
-
 
 // Rota para excluir uma atividade pelo ID
 app.delete('/atividade/:id', (req, res) => {
@@ -156,3 +151,86 @@ app.delete('/atividade/:id', (req, res) => {
     });
 });
     
+
+
+
+
+
+
+
+
+
+// Rota para listar todas as atividades
+app.get('/eventos', (req, res) => {
+    const sql = 'SELECT * FROM eventos'; // Tabela 'atividade'
+    db.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro no banco de dados' });
+        }
+        res.json(results); // Retorna todas as atividades
+    });
+});
+
+// Rota para obter os dados da atividade pelo ID
+app.get('/evento/:id', (req, res) => { //rota para pegar os dados da atividade com o id na URL
+    const id = req.params.id; //acessa o parâmetro da URL, pegando o id
+
+    const sql = 'SELECT * FROM eventos WHERE Id = ?'; // Usando a coluna 'Id'
+    db.query(sql, [id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro no banco de dados' });
+  
+        }
+
+        if (results.length > 0) {
+            res.json(results[0]); // Retorna os dados da atividade
+        } else {
+            res.status(404).json({ erro: 'evento não encontrado' });
+        }
+    });
+});
+
+// Rota para editar a atividade
+app.put('/editar/:id', (req, res) => { //define a rota apara atualizar os dados
+    const { titulo, descricao, dataEntrega } = req.body;
+    const id = req.params.id; //puxa o id da atividade que vai atualizar
+
+    const sql = 'UPDATE eventos SET titulo = ?, descricao = ?, dataEntrega = ? WHERE Id = ?'; // Atualiza a tabela 'atividade'
+    db.query(sql, [titulo, descricao, dataEntrega, id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro ao editar evento' });
+        }
+
+        if (results.affectedRows > 0) {
+            res.json({ sucesso: true });
+        } else {
+            res.status(404).json({ erro: 'evento não encontrado' });
+        }
+    });
+});
+
+
+
+// Rota para excluir uma atividade pelo ID
+app.delete('/evento/:id', (req, res) => {
+    const id = req.params.id;
+
+    const sql = 'DELETE FROM eventos WHERE Id = ?';
+    db.query(sql, [id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ erro: 'Erro no banco de dados' });
+        }
+
+        if (results.affectedRows > 0) {
+            res.json({ sucesso: true, mensagem: 'evento excluído com sucesso' });
+        } else {
+            res.status(404).json({ erro: 'evento não encontrado' });
+        }
+    });
+});
+    
+
+// Porta do servidor
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000');
+});
