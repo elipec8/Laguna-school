@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleEditarAtividade.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Editar atividade</title>
+</head>
+<body>
+    <div class="header">
+        <h1>LAGUNA</h1>
+        <ul>
+            <li class="dropdown">
+                <i class='bx bx-user-circle' id="perfil"></i>
+                <div class="dropdownMenu">
+                    <a class="dropdowneunoColor" href="#">Perfil</a>
+                    <a class="dropdowneunoColor" href="#">Sair</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <a class="voltar" href="#"><i class='bx bx-left-arrow-alt'></i></a>
+    
+    <form class="atividade" id="editarForm">
+        <div class="retangulo">
+            <div class="titulo_data">
+                <div class="tituloAtividade">
+                    <h2>Título do evento</h2>
+                    <input type="text" class="titulo" id="titulo" required>
+                </div>
+                <div class="data">
+                    <h2>Data de entrega</h2>
+                    <input type="datetime-local" class="dataAtividade" id="dataEntrega" required>
+                </div>
+                
+            </div>
+            <div class="descricao_atividade">
+                <h2>Descrição</h2>
+                <textarea type="text" class="descricao" id="descricao" required></textarea>
+            </div>
+            <div class="agendar">
+                <button>Salvar</button>
+                <button class="excluir">Excluir</button>
+            </div>
+        </div>  
+    </form>
+
+    <script src="../Back-end/scriptEditarEvento.js"></script>
+
+</body>
+</html>
