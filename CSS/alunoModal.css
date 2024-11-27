@@ -202,7 +202,7 @@ dialog::backdrop {
     background-color: rgb(0 0 0 / .3);
 }
 
-dialog { 
+dialog {
     border: none;
     border-radius: .5rem;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
@@ -252,6 +252,27 @@ textarea{
   .botao-transparente:hover {
     color: #a7aaad;        
   }
-#opcao-diagolo{
-display: flex;
-}
+
+.botao-transparente1 {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+    margin-left: 500px;
+  }
+  
+  .botao-transparente:hover {
+    color: #a7aaad;        
+  }
+
+.botao-transparente2 {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+    margin-left: 10px;
+  }
+  
+  .botao-transparente:hover {
+    color: #a7aaad;        
+  }
