@@ -1,0 +1,229 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*cabeçalho*/
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+    
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+    margin-top: -15px;
+}
+/*cabeçalho*/
+
+/*menu dropdown*/
+.dropdown{
+    list-style-type: none;
+}
+.dropdownMenu{
+    position: absolute;
+    display: none;
+    margin-left: 15px;
+}
+.dropdownMenu a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+}
+.dropdowneunoColor:hover{
+    background-color: #bac0c5;
+}
+.dropdown:hover .dropdownMenu{
+    display: block;
+    background-color: white;
+}
+.tela{
+    width: 99.7vw;
+    height:85.8vh;
+    display:flex;
+    gap: 10%; 
+    justify-content: center;
+}
+
+
+
+.boxperfil{
+     width: 30vw;
+     height:30%;
+     border:2px solid black;
+     background-color:rgba(0,0,0,30%) ;
+    
+
+}
+.boxperfil2{
+    width:30vw;
+    height:80%;
+    border:2px solid black;
+    margin-top: 2%;
+    background-color:rgba(0,0,0,30%) ;
+    
+    
+    
+}
+
+.boxperfil3{
+    width:30vw;
+    height:30%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,30%) ;
+   
+
+}
+.boxperfil4{
+   width:30vw;
+    height:80%;
+    border:2px solid black;
+    margin-top: 2%;
+    background-color:rgba(0,0,0,30%) ;
+   
+    
+}
+
+
+
+
+#tela1{
+    width: 30%;
+    height: 40%;
+    
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+.tela2{
+    width: 30%;
+    height: 40%;
+    margin-top: 5%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+body{
+    background-image: url('../IMG/majoras.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.quadrado1{
+    width:30vw;
+    height:30%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,30%) ;
+    margin-bottom: 12%;
+   
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.quadrado2{
+    width:30vw;
+    height:30%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,30%) ;
+    margin-bottom: 12%;
+   
+
+
+}
+
+nav.menu-lateral{
+    width: 250px;
+    height: 100%;
+    background-color: (#142837);
+    padding: 50px 0 50px 1%;
+    box-shadow: 3px 0 0 #142837;
+    top:0%;
+    left: 100px;
+    bottom: 20%;
+    align-self: flex-start;
+    margin-left: -7.2%;
+    
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir >i{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ul{
+    height: 40px;
+    gap: 5px;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+
+    background: #38739D;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+}
+
+ul it.item-menu a .icon > i{
+
+
+
+}
