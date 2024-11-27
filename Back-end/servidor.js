@@ -53,8 +53,10 @@ app.post('/autenticar', (req, res) => {
 });
 
 
+
+
 app.post('/cadastro', (req, res) => {
-    // Extrai o nome e a senha enviados pelo cliente (index.html)
+    // Extrai o nome e a senha enviados pelo cliente
     const {titulo, descricao, dataEntrega} = req.body;
 
 
@@ -157,6 +159,34 @@ app.delete('/atividade/:id', (req, res) => {
 
 
 
+app.post('/cadastroEvento', (req, res) => {
+    // Extrai o nome e a senha enviados pelo cliente (index.html)
+    const {titulo, descricao, dataEntrega} = req.body;
+
+
+    // Consulta SQL para verificar se o usuário e a senha existem no banco de dados
+    const sql = 'INSERT INTO eventos (titulo, descricao, dataEntrega) VALUES (?, ?, ?)';
+    // Executa a consulta no banco de dados, substituindo os ? pelos valores de nome e senha
+    db.query(sql, [titulo, descricao, dataEntrega], (err, results) => {
+        // Verifica se houve um erro na consulta
+        if (err) {
+            console.error('Erro ao consultar o banco de dados:', err); // Exibe o erro no console
+            // Responde ao cliente informando que houve um erro no servidor
+            res.status(500).json({ sucesso: false, mensagem: 'Erro no servidor.' });
+            return; // Interrompe a execução se houve um erro
+        }
+        // Verifica se a consulta retornou algum resultado (ou seja, usuário e senha válidos)
+
+       
+            if(results.affectedRows > 0)
+                res.json({ sucesso: true }); // Envia uma resposta de sucesso para o cliente
+            else 
+                res.json({ sucesso: false }); // Envia uma resposta de falha para o cliente
+            
+
+    });
+});
+
 
 
 
@@ -191,7 +221,7 @@ app.get('/evento/:id', (req, res) => { //rota para pegar os dados da atividade c
 });
 
 // Rota para editar a atividade
-app.put('/editar/:id', (req, res) => { //define a rota apara atualizar os dados
+app.put('/editarEvento/:id', (req, res) => { //define a rota apara atualizar os dados
     const { titulo, descricao, dataEntrega } = req.body;
     const id = req.params.id; //puxa o id da atividade que vai atualizar
 
