@@ -21,9 +21,9 @@ document.getElementById("loginForm").onsubmit = async function(e) {
     // Verifica o cargo do usuário e redireciona conforme necessário
     if (data.sucesso) {
         if (cargo === 'Aluno') {
-            window.location.href = "cadastroAtividade.html";
+            window.location.href = "telaTeste.html";
         } else if (cargo === 'Professor') {
-            window.location.href = "editarAtividade.html";
+            window.location.href = "telaTeste.html";
         }
     } else {
         // Exibe uma mensagem de erro se o nome de usuário, senha ou cargo estiverem incorretos
