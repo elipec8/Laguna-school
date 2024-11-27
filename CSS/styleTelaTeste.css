@@ -219,12 +219,33 @@ ul li.item-menu a .txt-link{
     margin-left: 40px;
 }
 
-.btn-excluir{
-   
-}
+button {
+    background: none;
+    border: none;
+  }
 
 #excluir{
-    
+
     color: red;
 
 }
+
+
+#excluir:hover{
+    color:rgb(177, 53, 53)
+}
+
+#editar:hover{
+    color:#1f689c
+}
+
+.evento{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.atividade{
+    display: flex;
+    margin-bottom: 5px;
+}
+
