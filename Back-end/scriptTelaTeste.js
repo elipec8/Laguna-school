@@ -199,18 +199,20 @@ async function mostrarDetalhesEvento(event) {
     try {
         // Faz uma requisição para buscar os detalhes da atividade
         const response = await fetch(`http://localhost:3000/evento/${id}`);
-        const atividade = await response.json();
+        const evento = await response.json();
+
+        console.log(evento);
 
         // Preenche o conteúdo do modal com os dados da atividade
-        const modal = document.querySelector('dialog');
-        const descricaoInput = modal.querySelector('.descrição');
-        descricaoInput.value = atividade.descricao;
+        const modal1 = document.querySelector('dialog');
+        const descricaoInput1 = modal1.querySelector('.descrição');
+        descricaoInput1.value = evento.descricao;
 
         // Mostra o modal
-        modal.showModal();
+        modal1.showModal();
     } catch (error) {
-        console.error('Erro ao carregar os detalhes da atividade:', error);
-        alert('Erro ao carregar os detalhes da atividade.');
+        console.error('Erro ao carregar os detalhes do evento:', error);
+        alert('Erro ao carregar os detalhes do evento.');
     }
 }
 
@@ -227,6 +229,4 @@ window.onload = function() {
     carregarAtividades();
     carregarEventos();
 };
-
-
 
