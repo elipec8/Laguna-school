@@ -99,13 +99,14 @@ app.get('/atividades', (req, res) => {
 // Rota para obter os dados da atividade pelo ID
 app.get('/atividade/:id', (req, res) => { //rota para pegar os dados da atividade com o id na URL
     const id = req.params.id; //acessa o parâmetro da URL, pegando o id
-
+    console.log(id);
     const sql = 'SELECT * FROM atividade WHERE Id = ?'; // Usando a coluna 'Id'
     db.query(sql, [id], (err, results) => {
         if (err) {
             return res.status(500).json({ erro: 'Erro no banco de dados' });
   
         }
+
 
         if (results.length > 0) {
             res.json(results[0]); // Retorna os dados da atividade
