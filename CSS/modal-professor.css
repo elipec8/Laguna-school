@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*cabeçalho*/
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+    
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 25px;
+    
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+    margin-top: -15px;
+}
+/*cabeçalho*/
+
+/*menu dropdown*/
+.dropdown{
+    list-style-type: none;
+}
+.dropdownMenu{
+    position: absolute;
+    display: none;
+    margin-left: 15px;
+}
+.dropdownMenu a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+}
+.dropdowneunoColor:hover{
+    background-color: #bac0c5;
+}
+.dropdown:hover .dropdownMenu{
+    display: block;
+    background-color: white;
+}
+.tela{
+    width: 99.7vw;
+    height:85.8vh;
+    display:flex;
+    gap: 10%; 
+    justify-content: center;
+}
+
+
+
+.boxperfil{
+     width: 30vw;
+     height:30%;
+     border:2px solid black;
+     background-color:rgba(0,0,0,30%) ;
+    
+
+}
+.boxperfil2{
+    width:30vw;
+    height:80%;
+    border:2px solid black;
+    margin-top: 2%;
+    background-color:rgba(0,0,0,30%) ;
+    
+}
+
+
+
+
+#tela1{
+    width: 30%;
+    height: 40%;
+    margin-left: 10%;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flexss;
+    
+
+}
+
+
+body{
+    background-image: url('../IMG/majoras.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.quadrado1{
+    width:30vw;
+    height:30%;
+    border:2px solid black;
+    background-color:rgba(0,0,0,30%) ;
+    margin-bottom: 12%;
+   
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+nav.menu-lateral{
+    width: 250px;
+    height: 100%;
+    background-color: (#142837);
+    padding: 50px 0 50px 1%;
+    box-shadow: 3px 0 0 #142837;
+    top:0%;
+    left: 100px;
+    bottom: 20%;
+    align-self: flex-start;
+    margin-left: -36.2%;
+    
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir >i{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ul{
+    height: 40px;
+    gap: 5px;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+
+    background: #38739D;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+}
+
+
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .3);
+}
+
+dialog {
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    width: 45%;
+    height: 23%;
+    align-self: center;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #38739D;
+    margin-top: 150px;
+}
+
+#adicionar-lista {
+     
+    align-self: center;
+    width: 200px;
+    height: 50px;
+    background-color:rgba(0, 0, 0, 0.288);
+    color:#ffffff
+}
+
+button {
+    color: rgb(0, 0, 0);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 25px;
+    align-self: baseline;
+    border: none;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
+    width: 840px;
+    padding: 10px;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    margin: 0 auto;
+}
+
+.botao-transparente {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+  }
+  
+  .botao-transparente:hover {
+    color: #a7aaad;        
+  }
+
+.botao-transparente1 {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+    margin-left: 690px;
+    margin-top: 15px;
+  }
+  
+  .botao-transparente1:hover {
+    color: #48ff00;        
+  }
+
