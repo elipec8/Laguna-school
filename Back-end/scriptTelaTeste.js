@@ -18,6 +18,9 @@ async function carregarAtividades() { //função para requisição no servidor
                 <button class="btn-excluirAtividade" data-id="${atividade.Id}">
                     <i class='bx bx-trash' id="excluir"></i>
                 </button>
+                <button class="btn-detalhesAtividade" data-id="${atividade.Id}">
+                    Detalhes
+                </button>
             `; //cria uma nova div para cada atividade, com título e um link de editar com o id
             listaAtividades.appendChild(div); //adiciona as novas div na lista
         });
@@ -25,6 +28,11 @@ async function carregarAtividades() { //função para requisição no servidor
          // Adiciona eventos de clique aos botões de excluir
          document.querySelectorAll('.btn-excluirAtividade').forEach(button => {
             button.addEventListener('click', excluirAtividade);
+        });
+
+        // Adiciona eventos de clique ao botão de detalhes
+        document.querySelectorAll('.btn-detalhesAtividade').forEach(button => {
+            button.addEventListener('click', mostrarDetalhesAtividade);
         });
 
 
@@ -68,6 +76,36 @@ async function excluirAtividade(event) { //função para requisição no servido
 
 
 
+async function mostrarDetalhesAtividade(event) {
+    const button = event.target.closest('.btn-detalhesAtividade');
+    const id = button.getAttribute('data-id');
+
+    try {
+        // Faz uma requisição para buscar os detalhes da atividade
+        const response = await fetch(`http://localhost:3000/atividade/${id}`);
+        const atividade = await response.json();
+
+        // Preenche o conteúdo do modal com os dados da atividade
+        const modal = document.querySelector('dialog');
+        const descricaoInput = modal.querySelector('.descrição');
+        descricaoInput.value = atividade.descricao;
+
+        // Mostra o modal
+        modal.showModal();
+    } catch (error) {
+        console.error('Erro ao carregar os detalhes da atividade:', error);
+        alert('Erro ao carregar os detalhes da atividade.');
+    }
+}
+
+// Função para fechar o modal
+const buttonClose = document.querySelector("dialog button");
+buttonClose.onclick = function () {
+    const modal = document.querySelector("dialog");
+    modal.close();
+}
+
+
 
 
 
@@ -94,6 +132,11 @@ async function carregarEventos() { //função para requisição no servidor
                 <button class="btn-excluirEvento" data-id="${evento.Id}">
                     <i class='bx bx-trash' id="excluir"></i>
                 </button>
+                <button class="btn-detalhesAtividade" data-id="${evento.Id}">
+                    Detalhes
+                </button>
+                
+
             `; //cria uma nova div para cada atividade, com título e um link de editar com o id
             listaEventos.appendChild(div); //adiciona as novas div na lista
         });
@@ -102,8 +145,14 @@ async function carregarEventos() { //função para requisição no servidor
          document.querySelectorAll('.btn-excluirEvento').forEach(button => {
             button.addEventListener('click', excluirEvento);
         });
+        
 
+        // Adiciona eventos de clique ao botão de detalhes
+        document.querySelectorAll('.btn-detalhesAtividade').forEach(button => {
+            button.addEventListener('click', mostrarDetalhesEvento);
+        });
 
+        
     } catch (error) {
         console.error('Erro ao carregar eventos:', error);
         alert('Erro ao carregar os eventos.');
@@ -141,8 +190,43 @@ async function excluirEvento(event) { //função para requisição no servidor a
 }
 
 
+
+
+async function mostrarDetalhesEvento(event) {
+    const button = event.target.closest('.btn-detalhesAtividade');
+    const id = button.getAttribute('data-id');
+
+    try {
+        // Faz uma requisição para buscar os detalhes da atividade
+        const response = await fetch(`http://localhost:3000/evento/${id}`);
+        const atividade = await response.json();
+
+        // Preenche o conteúdo do modal com os dados da atividade
+        const modal = document.querySelector('dialog');
+        const descricaoInput = modal.querySelector('.descrição');
+        descricaoInput.value = atividade.descricao;
+
+        // Mostra o modal
+        modal.showModal();
+    } catch (error) {
+        console.error('Erro ao carregar os detalhes da atividade:', error);
+        alert('Erro ao carregar os detalhes da atividade.');
+    }
+}
+
+// Função para fechar o modal
+const buttonClose1 = document.querySelector("dialog button");
+buttonClose1.onclick = function () {
+    const modal = document.querySelector("dialog");
+    modal.close();
+}
+
+
 // Chama a função para carregar as atividades assim que a página for carregada
 window.onload = function() {
     carregarAtividades();
     carregarEventos();
 };
+
+
+
