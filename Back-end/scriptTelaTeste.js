@@ -15,7 +15,7 @@ async function carregarAtividades() { //função para requisição no servidor
                 <p>${atividade.titulo} 
                     <a href="editarAtividade.html?id=${atividade.Id}" class="link-atividade"><i class='bx bx-edit-alt'></i></a>
                 </p>
-                <button class="btn-excluir" data-id="${atividade.Id}">
+                <button class="btn-excluirAtividade" data-id="${atividade.Id}">
                     <i class='bx bx-trash' id="excluir"></i>
                 </button>
             `; //cria uma nova div para cada atividade, com título e um link de editar com o id
@@ -23,7 +23,7 @@ async function carregarAtividades() { //função para requisição no servidor
         });
 
          // Adiciona eventos de clique aos botões de excluir
-         document.querySelectorAll('.btn-excluir').forEach(button => {
+         document.querySelectorAll('.btn-excluirAtividade').forEach(button => {
             button.addEventListener('click', excluirAtividade);
         });
 
@@ -43,7 +43,7 @@ async function carregarAtividades() { //função para requisição no servidor
 
 
 async function excluirAtividade(event) { //função para requisição no servidor ao clicar o botão
-    const button = event.target.closest('.btn-excluir'); // aciona o botão de excluir  // Garante que pegamos o botão, mesmo se clicar no ícone
+    const button = event.target.closest('.btn-excluirAtividade'); // aciona o botão de excluir  // Garante que pegamos o botão, mesmo se clicar no ícone
     const id = button.getAttribute('data-id'); // Obtém o ID da atividade
 
     const confirmar = confirm('Tem certeza que deseja excluir esta atividade?'); //aciona um tipo de alert de confirmação
@@ -89,9 +89,9 @@ async function carregarEventos() { //função para requisição no servidor
             div.classList.add('evento');
             div.innerHTML  = ` 
                 <p>${evento.titulo} 
-                    <a href="editarEvento.html?id=${evento.Id}" class="link-evento"><i class='bx bx-edit-alt'></i></a>
+                    <a href="editarEvento.html?id=${evento.Id}" class="link-evento"><i class='bx bx-edit-alt' id="editar"></i></a>
                 </p>
-                <button class="btn-excluir" data-id="${evento.Id}">
+                <button class="btn-excluirEvento" data-id="${evento.Id}">
                     <i class='bx bx-trash' id="excluir"></i>
                 </button>
             `; //cria uma nova div para cada atividade, com título e um link de editar com o id
@@ -99,7 +99,7 @@ async function carregarEventos() { //função para requisição no servidor
         });
 
          // Adiciona eventos de clique aos botões de excluir
-         document.querySelectorAll('.btn-excluir').forEach(button => {
+         document.querySelectorAll('.btn-excluirEvento').forEach(button => {
             button.addEventListener('click', excluirEvento);
         });
 
@@ -117,10 +117,10 @@ async function carregarEventos() { //função para requisição no servidor
 
 
 async function excluirEvento(event) { //função para requisição no servidor ao clicar o botão
-    const button = event.target.closest('.btn-excluir'); // aciona o botão de excluir  // Garante que pegamos o botão, mesmo se clicar no ícone
+    const button = event.target.closest('.btn-excluirEvento'); // aciona o botão de excluir  // Garante que pegamos o botão, mesmo se clicar no ícone
     const id = button.getAttribute('data-id'); // Obtém o ID da atividade
 
-    const confirmar = confirm('Tem certeza que deseja excluir esta atividade?'); //aciona um tipo de alert de confirmação
+    const confirmar = confirm('Tem certeza que deseja excluir este evento?'); //aciona um tipo de alert de confirmação
     if (!confirmar) return; // Cancela a exclusão se o usuário não confirmar
 
     try {
@@ -132,11 +132,11 @@ async function excluirEvento(event) { //função para requisição no servidor a
             throw new Error(`Erro ao excluir atividade: ${response.statusText}`);
         } //verifica se tem algum erro, caso sim mostra uma mensagem detalhada
 
-        alert('Atividade excluída com sucesso!');
-        carregarAtividades(); // Atualiza a lista
+        alert('Evento excluído com sucesso!');
+        carregarEventos(); // Atualiza a lista
     } catch (error) {
         console.error('Erro ao excluir atividade:', error);
-        alert('Erro ao excluir a atividade.');
+        alert('Erro ao excluir o Evento.');
     }
 }
 
