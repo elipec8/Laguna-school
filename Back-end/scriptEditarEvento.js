@@ -47,7 +47,7 @@ document.getElementById('editarForm').onsubmit = async function (e) {
 
 
     try {
-        const response = await fetch(`http://localhost:3000/editar/${id}`, {
+        const response = await fetch(`http://localhost:3000/editarEvento/${id}`, {
             method: 'PUT', //método para atulizar os dados já existentes
             headers: {
                 'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ document.getElementById('editarForm').onsubmit = async function (e) {
 
         if (data.sucesso) {
             alert('Evento atualizado com sucesso!'); //pop-up com a mensagem de sucesso
-            window.location.href = 'teste.html';  // Redireciona de volta para a página principal
+            window.location.href = 'telaTeste.html';  // Redireciona de volta para a página principal
         } else {
             alert('Erro ao atualizar o evento.'); //pop-up com a mensagem de erro
         }
