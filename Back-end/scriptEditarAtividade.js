@@ -5,20 +5,20 @@ function getUrlParameter(name) {  //captura o valor do parâmetro da URL
 }
 
 // Ao carregar a página, pegar o ID da URL e buscar os dados da atividade
-async function carregarAtividade() { 
+async function carregarEventos() { 
     const id = getUrlParameter('id'); // Pega o 'id' da URL
     if (!id) { 
-        alert("ID da atividade não encontrado.");
+        alert("ID do evento não encontrado.");
         return;
     } //se não exisitr o id aparece um alerta e cancela a execução
 
     try {
         // Faz uma requisição para o servidor para pegar os dados da atividade, usando o id fornecido anteriormente
-        const response = await fetch(`http://localhost:3000/atividade/${id}`);
+        const response = await fetch(`http://localhost:3000/evento/${id}`);
         const data = await response.json(); //converte para json
 
         if (data.erro) {
-            alert("Erro ao buscar a atividade.");
+            alert("Erro ao buscar o evento.");
             return;
         }
 
@@ -26,14 +26,15 @@ async function carregarAtividade() {
         document.getElementById('titulo').value = data.titulo;
         document.getElementById('descricao').value = data.descricao;
         document.getElementById('dataEntrega').value = data.dataEntrega;
+        
     } catch (error) {
-        console.error('Erro ao carregar dados da atividade:', error);
-        alert("Erro ao carregar os dados da atividade.");
+        console.error('Erro ao carregar dados do evento:', error);
+        alert("Erro ao carregar os dados do evento.");
     }
 }
 
 // Chama a função quando a página for carregada
-window.onload = carregarAtividade;
+window.onload = carregarEventos;
 
 // Ao enviar o formulário, envia os dados atualizados para o servidor
 document.getElementById('editarForm').onsubmit = async function (e) {
@@ -44,22 +45,23 @@ document.getElementById('editarForm').onsubmit = async function (e) {
     const descricao = document.getElementById('descricao').value;
     const dataEntrega = document.getElementById('dataEntrega').value;
 
+
     try {
-        const response = await fetch(`http://localhost:3000/editar/${id}`, {
+        const response = await fetch(`http://localhost:3000/editarEvento/${id}`, {
             method: 'PUT', //método para atulizar os dados já existentes
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ titulo, descricao, dataEntrega })
+            body: JSON.stringify({ titulo, descricao, dataEntrega})
         });
 
         const data = await response.json();
 
         if (data.sucesso) {
-            alert('Atividade atualizada com sucesso!'); //pop-up com a mensagem de sucesso
-            window.location.href = 'teste.html';  // Redireciona de volta para a página principal
+            alert('Evento atualizado com sucesso!'); //pop-up com a mensagem de sucesso
+            window.location.href = 'telaTeste.html';  // Redireciona de volta para a página principal
         } else {
-            alert('Erro ao atualizar a atividade.'); //pop-up com a mensagem de erro
+            alert('Erro ao atualizar o evento.'); //pop-up com a mensagem de erro
         }
     } catch (error) {
         console.error('Erro ao editar a atividade:', error);
