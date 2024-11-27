@@ -27,6 +27,14 @@ h1 {
     font-size: 50px;
 }
 
+h2 {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 25px;
+    
+}
+
 #perfil {
     font-size: 80px;
     margin-left: auto; 
@@ -249,3 +257,82 @@ button {
     margin-bottom: 5px;
 }
 
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .3);
+}
+
+dialog {
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    width: 45%;
+    height: 23%;
+    align-self: center;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #38739D;
+    margin-top: 150px;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
+    width: 840px;
+    padding: 10px;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    margin: 0 auto;
+}
+
+.botao-transparente {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;
+    font-size: 20px;         /* Altera o cursor para a mãozinha ao passar o mouse */
+    margin-top: 40px;
+
+
+}
+  
+  .botao-transparente:hover {
+    color: #a7aaad;        
+  }
+
+.botao-transparente1 {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+    margin-left: 560px;
+    font-size: 20px;
+  }
+  
+  .botao-transparente1:hover {
+    color: #ff0000da;        
+  }
+
+.botao-transparente2 {
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  
+  .botao-transparente2:hover {
+    color: #33ff00d0;        
+  }
+
+.btn-detalhesAtividade{
+    background: transparent;    /* Deixa o fundo transparente */
+    border: none;              /* Remove a borda do botão */
+    color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+    cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+
+}
+
+.btn-detalhesAtividade:hover{
+    color: #cccccce3;
+}
