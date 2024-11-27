@@ -17,7 +17,7 @@ document.getElementById("atividadeForm").onsubmit = async function(e) {
     // Espera pela resposta do servidor e converte a resposta em um objeto JSON
     const data = await res.json();
     if (data.sucesso){
-        window.location.href = "login.html";
+        window.location.href = "telaTeste.html";
     }
    
     console.log(titulo, descricao, dataEntrega)
