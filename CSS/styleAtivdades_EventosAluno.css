@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*cabeçalho*/
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto; 
+  align-items: center; 
+  background: radial-gradient(#38739D, #142837);
+  padding: 25px;
+}
+
+.principal{
+  display: flex;
+  flex-direction: column;
+
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  font-size: 50px;
+  
+}
+
+#perfil {
+  font-size: 80px;
+  margin-left: auto; 
+  color: #ffffff;
+  margin-top: -15px;
+}
+/*cabeçalho*/
+
+/*menu dropdown*/
+.dropdown{
+  list-style-type: none;
+}
+.dropdownMenu{
+  position: absolute;
+  display: none;
+  margin-left: 15px;
+}
+.dropdownMenu a{
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+}
+.dropdowneunoColor:hover{
+  background-color: #bac0c5;
+}
+.dropdown:hover .dropdownMenu{
+  display: block;
+  background-color: white;
+}
+.tela{
+  width: 99.7vw;
+  height:85.8vh;
+  display:flex;
+  gap: 10%; 
+  justify-content: center;
+}
+
+
+
+.boxperfil{
+   width: 30vw;
+   height:30%;
+   border:2px solid black;
+   background-color:rgba(0,0,0,30%) ;
+  
+
+}
+.boxperfil2{
+  width:30vw;
+  height:80%;
+  border:2px solid black;
+  margin-top: 2%;
+  background-color:rgba(0,0,0,30%) ;
+  
+  
+  
+}
+
+.boxperfil3{
+  width:30vw;
+  height:30%;
+  border:2px solid black;
+  background-color:rgba(0,0,0,30%) ;
+ 
+
+}
+.boxperfil4{
+ width:30vw;
+  height:80%;
+  border:2px solid black;
+  margin-top: 2%;
+  background-color:rgba(0,0,0,30%) ;
+ 
+  
+}
+
+
+
+
+#tela1{
+  width: 30%;
+  height: 40%;
+  
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+}
+.tela2{
+  width: 30%;
+  height: 40%;
+  margin-top: 5%;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+body{
+  background-image: url('../IMG/majoras.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  
+}
+
+.quadrado1{
+  width:30vw;
+  height:30%;
+  border:2px solid black;
+  background-color:rgba(0,0,0,30%) ;
+  margin-bottom: 12%;
+ 
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+.quadrado2{
+  width:30vw;
+  height:30%;
+  border:2px solid black;
+  background-color:rgba(0,0,0,30%) ;
+  margin-bottom: 12%;
+ 
+
+
+}
+
+nav.menu-lateral{
+  width: 250px;
+  height: 100%;
+  background-color: (#142837);
+  padding: 50px 0 50px 1%;
+  box-shadow: 3px 0 0 #142837;
+  top:0%;
+  left: 100px;
+  bottom: 20%;
+  align-self: flex-start;
+  margin-left: -7.2%;
+  
+}
+
+.btn-expandir{
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn-expandir >i{
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+ul{
+  height: 40px;
+  gap: 5px;
+  list-style-type: none;
+}
+
+ul li.item-menu{
+  transition: .2s;
+}
+
+ul li.item-menu:hover{
+
+  background: #38739D;
+}
+
+ul li.item-menu a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+  margin-left: 40px;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+#excluir{
+
+  color: red;
+
+}
+
+
+#excluir:hover{
+  color:rgb(177, 53, 53)
+}
+
+#editar:hover{
+  color:#1f689c
+}
+
+.evento{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.atividade{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / .3);
+}
+
+dialog {
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  width: 45%;
+  height: 23%;
+  align-self: center;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #38739D;
+  margin-top: 150px;
+}
+
+textarea{
+  resize: none;
+  height: 100px;
+  width: 840px;
+  padding: 10px;
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  margin: 0 auto;
+}
+
+.botao-transparente {
+  background: transparent;    /* Deixa o fundo transparente */
+  border: none;              /* Remove a borda do botão */
+  color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+  cursor: pointer;
+  font-size: 20px;         /* Altera o cursor para a mãozinha ao passar o mouse */
+  margin-top: 40px;
+
+
+}
+
+.botao-transparente:hover {
+  color: #a7aaad;        
+}
+
+.botao-transparente1 {
+  background: transparent;    /* Deixa o fundo transparente */
+  border: none;              /* Remove a borda do botão */
+  color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+  cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+  margin-left: 560px;
+  font-size: 20px;
+}
+
+.botao-transparente1:hover {
+  color: #ff0000da;        
+}
+
+.botao-transparente2 {
+  background: transparent;    /* Deixa o fundo transparente */
+  border: none;              /* Remove a borda do botão */
+  color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+  cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.botao-transparente2:hover {
+  color: #33ff00d0;        
+}
+
+.btn-detalhesAtividade{
+  background: transparent;    /* Deixa o fundo transparente */
+  border: none;              /* Remove a borda do botão */
+  color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+  cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+
+}
+
+.btn-detalhesAtividade:hover{
+  color: #cccccce3;
+}
+
+
+.btn-detalhesEvento{
+  background: transparent;    /* Deixa o fundo transparente */
+  border: none;              /* Remove a borda do botão */
+  color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+  cursor: pointer;          /* Altera o cursor para a mãozinha ao passar o mouse */
+
+}
+
+.btn-detalhesEvento:hover{
+  color: #cccccce3;
+}
+
+
+
+.btn-detalhesAtividade2{
+  background: transparent;    /* Deixa o fundo transparente */
+  border: none;              /* Remove a borda do botão */
+  color: #ffffff;         /* Define a cor do texto (preto neste caso) */
+  cursor: pointer;  
+}
+
+
+.btn-detalhesAtividade2:hover{
+  color: #cccccce3;
+}
+
+#data{
+  margin-left: 10px;
+  margin-right: 10px;
+}
