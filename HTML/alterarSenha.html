@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//CSS/alterarSenha.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Cadastro Atividade</title>
+</head>
+<body>
+    <div class="header">
+        <h1>LAGUNA</h1>
+        <ul>
+            <li class="dropdown">
+                <i class='bx bx-user-circle' id="perfil"></i>
+                <div class="dropdownMenu">
+                    <a class="dropdowneunoColor" href="#">Perfil</a>
+                    <a class="dropdowneunoColor" href="#">Sair</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <a class="voltar" href="#"><i class='bx bx-left-arrow-alt'></i></a>
+    <form class="atividade" id="alterarSenhaForm">
+        <div class="retangulo">
+            <div class="retangulo">
+             
+                <form class="login" id="loginForm">
+            
+                    <div class="usuario">
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="text" id="senhaAntiga" name="senhaAntiga" placeholder="Senha atual" req>
+                    </div>
+            
+                    <div class="senha">
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="text" id="novaSenha" name="novaSenha" placeholder="Nova senha" req>
+                    </div>
+                    <div class="confirmarSenha">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="confirmarNovaSenha" name="confirmarNovaSenha" placeholder="Confirmar Nova Senha" required>
+                    </div>
+            
+            
+                    <button class="acessar">Salvar</button>
+                    <h2 id="mensagem"></h2>
+                </form>
+                
+            
+            </div>
+            
+            
+            <script src="../Back-end/scriptmudarSenha.js"></script>
+        </div>  
+    </form>
+
+
+</body>
+</html>
