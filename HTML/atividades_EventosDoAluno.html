@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleAtivdades_EventosAluno.css">   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Atividades e eventos do alunor</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>LAGUNA</h1>
+        <ul>
+            <li class="dropdown">
+                <i class='bx bx-user-circle' id="perfil"></i>
+                <div class="dropdownMenu">
+                    <a class="dropdowneunoColor" href="informacoesGerais.html">Perfil</a>
+                    <a class="dropdowneunoColor" href="../HTML/login.html">Sair</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tela">
+      
+    <nav class="menu-lateral" style="background-color:  #142837;">
+
+
+
+        <ul>
+            <li class="item-menu">
+                <a href="Perfil inicialAluno.html">
+                    <span class="icon"><i class='bx bxs-home-alt-2' ></i></i></span>
+                    <span class="txt-link">Página Inicial</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="atividades_EventosDoAluno.html">
+                    <span class="icon"><i class='bx bxs-calendar' ></i></i></span>
+                    <span class="txt-link">Ativdades e Eventos</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>  
+        
+        
+        
+    <div id="tela1">
+        <div class="boxperfil">
+            <h3>Eventos</h3>
+            <a href="cadastroEvento.html"></a>
+        </div>
+    
+        <div class="boxperfil2">
+            <div id="listaEventos"></div>
+        </div>
+    </div>
+    
+    <div class="tela2">
+        <div class="boxperfil3">
+            <h3>Atividades</h3>
+            <a href="cadastroAtividade.html"></a>
+        </div>
+        <div class="boxperfil4">
+            <div id="listaAtividades"></div>
+        </div>
+            </div>
+        </div>   
+
+    </div>
+
+
+    <dialog>
+
+        <h2>Detalhes</h2>
+
+
+        
+       <textarea class="descrição" readonly> </textarea>
+       <button class="botao-transparente">Voltar</button>
+       <button class="botao-transparente1">Não participar</button>
+       <button class="botao-transparente2">Participar</button>
+    </dialog>
+    
+<script src="../Back-end/scriptAluno.js"></script>
+    
+</html>
