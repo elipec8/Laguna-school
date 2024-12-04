@@ -1,0 +1,101 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background: radial-gradient(#38739D, #142837);
+    padding: 25px;
+}
+
+
+.laguna {
+    color: rgb(255, 255, 255);
+    font-family: "Montaga", serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+body {
+    background: radial-gradient(#11293a,#3388c0)  ;
+    margin: 0; 
+    height: 100vh;
+}
+
+#perfil {
+    font-size: 80px;
+    margin-left: auto; 
+    color: #ffffff;
+}
+
+.nossa{
+    text-align: center;
+    color: white;
+}
+
+.foto1{
+    position: absolute;
+    left: 99px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}
+
+
+
+.foto2{
+    position: absolute;
+    left: 679px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}   
+
+.foto3{
+    position: absolute;
+    left: 1289px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}
+
+
+.foto4{
+    position: absolute;
+    left: 99px;
+    top: 680px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+}
+
+.foto5{
+    position: absolute;
+    left: 679px;  
+    top: 670px;
+    text-align: center; 
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+    margin: 10px;
+}
+
+
+.foto6{
+    position: absolute;
+    left: 1289px;  
+    top: 680px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+    background-color:#ffffff;
+
+}
