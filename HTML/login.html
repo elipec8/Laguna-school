@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styleLogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+
+</head>
+
+<body>
+<div class="retangulo">
+    <h1>LAGUNA</h1>
+    <form class="login" id="loginForm">
+
+        <div class="usuario">
+            <i class='bx bx-user'></i>
+            <input type="text" id="usuario" name="usuario" placeholder="Usuário">
+        </div>
+
+        <div class="senha">
+            <i class='bx bx-lock-alt' ></i>
+            <input type="text" id="senha" name="senha" placeholder="Senha">
+        </div>
+        <div class="cargo">
+            <select id="cargo">
+                <option></option>
+                <option>Professor</option>
+                <option>Aluno</option>
+            </select>
+        </div>
+        
+        <button class="acessar">acessar</button>
+    </form>
+    
+    <!-- Mensagem de erro ou sucesso será exibida aqui -->
+    <h2 id="mensagem"></h2>
+
+        <div class="footer">
+            <div class="sobreNos">
+                <a href="sobreNos.html">Sobre nós</a>
+            </div>
+            <div class="unidades">
+                <a href="#">Conheça nossas unidades</a>
+            </div>
+        </div>
+</div>
+
+<script src="../Back-end/scriptLogin.js"></script>
+
+
+</body>
 
