@@ -1,0 +1,108 @@
+/*sobre nós*/
+
+
+*{
+    overflow: hidden;
+}
+
+h2{
+    color: white;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../img/fundo.png");
+  background-size: cover;
+}
+
+.meio{
+    text-align: center;
+    color: ghostwhite;
+}
+
+.allft {
+    text-align: center; 
+  }
+
+.foto{
+    margin: 50px; 
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(44,44,44, 0.15);
+}
+
+.dudu{
+    position: relative;     
+  
+  width: 200px;
+  top: -20px;       
+  right: -330px;        
+}
+
+.lucas{
+    position: relative;     
+  
+  width: 250px;
+  top: -100px;       
+  right: -675px;        
+}
+
+.murillo{
+    position: relative;     
+  
+  width: 200px;
+  top: -180px;       
+  right: -1028px;    
+}
+
+.felipe{
+    position: relative;     
+  
+    width: 200px;
+    top: -260px;       
+    right: -1345px;    
+}
+
+.des{
+    text-align: center;
+    color: whitesmoke;
+    position: relative; 
+    width: 1000px;  
+    top: -180px;
+    right: -457px
+}
+
+.sobre{
+    text-align: center;
+    position: relative;
+    top: -180px;
+    
+}
+
+
+
+
+i{
+    font-size: 35px;
+    display: grid;
+    
+}
+
+
+a{
+    display: grid;
+    margin-left: 4%;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 2px 2px 2px #000;
+    width: fit-content;
+}
+
+a:hover{
+    background-color: rgb(206, 195, 195);
+}
