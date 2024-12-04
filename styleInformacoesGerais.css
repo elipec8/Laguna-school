@@ -1,0 +1,298 @@
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width:60%
+}
+
+
+.perfil{
+    text-align: center;
+}
+.foto{
+text-align: center;
+color: white;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+body{
+    background-color: rgb(46, 96, 130)
+}
+
+
+
+
+
+
+i{
+    font-size: 35px;
+    display: grid;
+    
+}
+
+a:hover{
+    color: rgb(212, 212, 212);;
+}
+
+
+
+
+
+.botao:hover{
+    background-color: rgb(206, 195, 195);
+
+}
+
+.botao{
+    display: grid;
+    margin-left: 4%;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 100%;
+    text-align: center ;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 2px 2px 2px #000;
+    width: fit-content;
+}
+
+.tela{
+    width:98vw;
+    height:98vh;
+    display:flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.info{
+     width:80%;
+     height:10%;
+    
+     margin-top:2%;
+     display:flex;
+     align-items:end;
+     justify-content: center;
+     
+     
+
+}
+.nome{
+    width:80%;
+     height:10%;
+
+
+}
+.linha{
+    width:80%;
+     height:10%;
+}
+
+.nome{
+    width:80%;
+     height:10%;
+  
+     display:flex;
+     align-items: center;
+
+     
+
+}
+
+.email{
+    width:80%;
+     height:10%;
+    
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.senha{
+    width:80%;
+     height:10%;
+     
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.telefone{
+    width:80%;
+     height:10%;
+
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.ocupacao{
+    width:80%;
+     height:10%;
+     display:flex;
+     align-items: center;
+     margin-left: -2%;
+
+}
+
+.pais{
+    width:80%;
+     height:10%;
+     display:flex;
+     align-items: center;
+     
+
+}
+
+.cidade{
+    width:80%;
+     height:10%;
+     display:flex;
+     align-items: center;
+     
+
+}
+.textoup{
+    
+    color:white;
+  
+}
+.linha1{
+    border:1px solid#ffffff;
+    width:100%
+}
+
+.boxnome{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 1%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxemail{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 0.7%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxsenha{
+    width: 128%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 1%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxtelefone{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 0%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxocupacao{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 0.4%;
+   background-color: rgba(0, 0, 0, 20%);
+}
+
+.boxpais{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 20%);
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 2.2%;
+}
+.boxcidade{
+    width:90%;
+    height:80%;
+    border: 2px solid black;
+    display:flex;
+   flex-wrap: nowrap;
+   margin-left: 1%;
+   background-color: rgba(0, 0, 0, 20%);
+}   
+
+.ft{
+    text-align: center;
+    color: #ffffff ;
+    
+}
+
+h3{
+    color: #ffffff;
+}
+
+.bx_bx-user-circle{
+    font-size:large;
+}
+
+#perfil{
+    font-size: 250px;
+}
+.mudar-senha{
+    display: flex;
+    margin-left: 1%;
+    text-decoration:underline;
+    color: #ffffff;
+}   
+
+
+p{
+    color: #ffffff;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.retancidade{
+
+    width:385%;
+    height: 50px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.103);
+    display:flex;
+    flex-wrap: nowrap;
+    margin-left: -69px;
+ }
+
+ .retanpais{
+    width:385%;
+    height: 50px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.103);
+    display:flex;
+    flex-wrap: nowrap;
+    margin-left: -42px;
+ }
